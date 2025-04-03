@@ -1,69 +1,47 @@
-"use client";
-
 import Container from "@/components/container";
 import Image from "next/image";
 import React from "react";
-import { BackgroundRecipes } from "../../../../public/assets";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import { Background1 } from "../../../../public/assets";
 
-import "./slider.css";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import { getRecipes } from "@/sanity/querys/recipes";
+import Link from "next/link";
 
-const Recipes = () => {
+const Recipes = async () => {
+  const recipes: IRecipe[] = await getRecipes();
+
+  const cards = recipes.map((card, index) => (
+    <Link href={`/receitas/${card.slug}`} className="cursor-pointer">
+      <Card key={index} card={card} index={index} />
+    </Link>
+  ));
   return (
-    <section className="w-full relative py-32 ">
+    <section className="w-full relative py-32 mt-[100px]">
       <Image
-        src={BackgroundRecipes}
+        src={Background1}
         fill
         className="absolute object-cover -z-10"
         alt="Receitas"
+        quality={100}
       />
-      <div className="mt-32 ">
-        <div className="w-full">
-          <h1 className="text-white text-[3em] max-w-[800px] font-bold">
-            Conheça as receitas mais{" "}
-            <span className="text-red-800">queijuuuuudas</span> para alegrar o
-            seu dia
-          </h1>
-          <Swiper
-            slidesPerView={5 / 1.2}
-            slidesPerGroupSkip={2}
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            navigation={true}
-            pagination={{ clickable: true }}
-            spaceBetween={30}
-            className="offset-container-recipe swiper-no-padding pr-4"
-          >
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>1</span>
-            </SwiperSlide>
-            <SwiperSlide className="flex flex-col justify-center border bg-gray-400 py-52 shadow-lg rounded-xl ">
-              <span>R</span>
-            </SwiperSlide>
-          </Swiper>
+      <div className="mt-10 ">
+        <div className="w-full flex flex-col justify-center">
+          <Container>
+            <div className="w-full flex flex-col items-center justify-center gap-3 ">
+              <h1 className="text-white text-center text-[4em]  font-bold">
+                As melhores receitas{" "}
+                <span className="text-[#FFF484]">Matupi!</span>
+              </h1>
+
+              <p className="text-gray-200 text-2xl font-medium text-center max-w-[800px]">
+                Na Matupi, queremos te inspirar todos os dias! Por isso,
+                reunimos receitas irresistíveis feitas com o carinho e a
+                qualidade dos nossos produtos.
+              </p>
+            </div>
+          </Container>
+
+          <Carousel items={cards} />
         </div>
       </div>
     </section>
@@ -72,23 +50,12 @@ const Recipes = () => {
 
 export default Recipes;
 
-const SlideButtons = () => {
-  const swiper = useSwiper();
-
-  return (
-    <div className="">
-      <button
-        onClick={() => swiper.slidePrev()}
-        className="absolute top-24 left-[20px] bg-white border p-3 rounded-full"
-      >
-        left
-      </button>
-      <button
-        onClick={() => swiper.slideNext()}
-        className="absolute top-24 right-[20px] border bg-white p-3 rounded-full"
-      >
-        right
-      </button>
-    </div>
-  );
-};
+// const recipes = [
+//   { title: "X-Caboquinho" },
+//   { title: "Misto Quente Italiano" },
+//   { title: "Ciabatta Royalle" },
+//   { title: "Pão de queijo recheado" },
+//   { title: "Queijo Coalho Empanado" },
+//   { title: "Bruschetta de abacate com queijo Minas" },
+//   { title: "Escondidinho de carne desfiada gratinada" },
+// ];

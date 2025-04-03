@@ -3,21 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-.offset-container-right {
-  padding-right: calc((100vw - 1024px) / 2);
-}
-
-.offset-container-recipe {
-  padding-right: calc((100vw - 1024px) / 2);
-
-  padding-left: 2.75rem; /* equivalent to px-11 in Tailwind CSS */
-  padding-right: 2.75rem; /* equivalent to px-11 in Tailwind CSS */
-
-  @media (min-width: 1024px) {
-    padding-left: calc((100vw - 1320px) / 2 + 446px);
-  }
-}
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

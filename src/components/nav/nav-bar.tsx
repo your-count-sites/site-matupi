@@ -3,7 +3,7 @@ import DesktopNav from "./desktop-nav";
 
 const NavBar = () => {
   return (
-    <header className="w-full overflow-hidden border">
+    <header className="w-full overflow-hidden bg-white">
       <DesktopNav />
     </header>
   );

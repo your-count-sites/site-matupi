@@ -1,20 +1,32 @@
 import React from "react";
 import Container from "../container";
+import Image from "next/image";
+import { Logo } from "../../../public/assets";
+import Link from "next/link";
 
 const DesktopNav = () => {
   return (
-    <nav className="py-6">
+    <nav className="">
       <Container>
-        <div className="flex flex-row justify-between items-center">
-          <h1 className="text-3xl">Logo</h1>
+        <div className="w-full flex flex-row justify-between items-center py-4 ">
+          <Image src={Logo} width={200} height={50} alt="Matupi" />
 
-          <ul className="flex flex-row gap-8 text-md uppercase font-semibold">
-            <li>Receitas</li>
-            <li>Produtos</li>
-            <li>Serviços</li>
-            <li>Fale Conosco</li>
-            <li>A Matupi</li>
-          </ul>
+          <div className="w-full flex flex-row gap-10 ">
+            <ul className="w-full flex flex-row items-center gap-10 uppercase font-extrabold text-sm text-red-500 justify-end">
+              <li>Receitas</li>
+              <li>Produtos</li>
+              <li>Serviços</li>
+              <li>Conteúdos</li>
+              <li>A Matupi</li>
+              <li>Fale Conosco</li>
+            </ul>
+            <Link
+              href={"/"}
+              className="bg-red-500 text-white p-3 rounded-xl w-[20%] flex flex-row justify-center font-bold hover:scale-105 trasnsition-all ease-out duration-300"
+            >
+              Compre Agora
+            </Link>
+          </div>
         </div>
       </Container>
     </nav>
