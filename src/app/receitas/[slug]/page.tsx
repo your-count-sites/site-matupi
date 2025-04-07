@@ -12,8 +12,6 @@ const RecipeSinglePage = async (props: { params: Params }) => {
 
   const recipe: IRecipe = await getSingleRecipe(slug);
 
-  console.log(recipe);
-
   return (
     <>
       <HeroRecipe recipe={recipe} />

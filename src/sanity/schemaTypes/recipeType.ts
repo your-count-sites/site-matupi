@@ -18,6 +18,23 @@ export const recipeType = defineType({
         source: "title",
       },
     }),
+
+    defineField({
+      name: "mainImage",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
+        },
+      ],
+      validation: (Rule) => Rule.required(),
+    }),
+
     {
       name: "description",
       title: "Description",
@@ -59,6 +76,18 @@ export const recipeType = defineType({
         },
       ],
     },
+
+    defineField({
+      name: "products",
+      type: "array",
+      of: [
+        defineArrayMember({
+          type: "reference",
+          to: { type: "product" },
+        }),
+      ],
+    }),
+
     {
       name: "prepTime",
       title: "Preparation Time",

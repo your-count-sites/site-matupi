@@ -35,17 +35,34 @@ export const productType = defineType({
     }),
     defineField({
       name: "categories",
+      type: "reference",
+      to: { type: "productCategory" },
+    }),
+
+    defineField({
+      name: "warnings",
       type: "array",
       of: [
-        defineArrayMember({
-          type: "reference",
-          to: { type: "productCategory" },
-        }),
+        {
+          type: "object",
+          fields: [
+            {
+              name: "warnings",
+              title: "Warnings",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+        },
       ],
     }),
 
     defineField({
-      name: "description",
+      name: "ingredients",
+      type: "blockContent",
+    }),
+    defineField({
+      name: "conservation",
       type: "blockContent",
     }),
   ],

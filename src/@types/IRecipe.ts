@@ -4,13 +4,13 @@ interface Slug {
 }
 
 interface Ingredient {
+  _key: string;
   name: string;
-  quantity: string;
 }
 
 interface Instruction {
+  _key: string;
   step: number;
-  description: string;
 }
 
 interface IRecipe {
@@ -23,6 +23,8 @@ interface IRecipe {
   servings: string;
   slug: Slug;
   title: string;
+  mainImage: string;
+  thumbImage: string;
   _createdAt: string;
   _id: string;
   _updatedAt: string;

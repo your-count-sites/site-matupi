@@ -1,4 +1,3 @@
-import Container from "@/components/container";
 import React from "react";
 import {
   Select,
@@ -18,12 +17,11 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { Background2 } from "../../../../public/assets";
-import Image from "next/image";
+import Container from "@/components/container";
 
 const Products = () => {
   return (
-    <section className="w-full overflow-hidden relative py-52 ">
+    <section className="w-full overflow-hidden relative py-52 bg-[#F30808]">
       <Container>
         <div className="w-full flex flex-row justify-between items-center">
           <h1 className="text-[4em] max-w-[500px] font-bold text-white">

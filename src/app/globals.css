@@ -118,3 +118,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+.clip-image {
+  clip-path: polygon(
+    20% 0%,
+    100% 0,
+    100% 20%,
+    100% 64%,
+    80% 81%,
+    23% 100%,
+    0 100%,
+    0 0
+  );
+}

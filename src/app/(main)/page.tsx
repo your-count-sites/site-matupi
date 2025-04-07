@@ -1,3 +1,4 @@
+import ContentsSection from "./_components/contents";
 import Hero from "./_components/hero";
 import Products from "./_components/products";
 import Recipes from "./_components/recipes";
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Recipes />
       <Products />
+      <ContentsSection />
     </>
   );
 }

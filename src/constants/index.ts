@@ -12,3 +12,12 @@ export const products = [
   { title: "Queijo Coalho no Espeto 400g" },
   { title: "Queijo Minas Frescal 400g" },
 ];
+
+export const NAV_LINKS = [
+  { name: "Receitas", href: "/" },
+  { name: "Produtos", href: "/" },
+  { name: "Serviços", href: "/" },
+  { name: "Conteúdos", href: "/" },
+  { name: "A Matupi", href: "/" },
+  { name: "Fale Conosco", href: "/" },
+];

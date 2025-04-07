@@ -4,7 +4,7 @@ import { client } from "../lib/client";
 const options = { next: { revalidate: 10 } };
 
 export async function getRecipes() {
-  const query = groq`*[_type == "recipe"] {title, slug,  "slug": slug.current,  "category": category->title, prepTime, difficult}`;
+  const query = groq`*[_type == "recipe"] {title, slug,  "slug": slug.current, mainImage,  "category": category->title, prepTime, difficult}`;
 
   const data = client.fetch(query, {}, options);
 
@@ -17,6 +17,7 @@ export async function getSingleRecipe(slug: string) {
   slug, 
   "slug": slug.current, 
   "category": category->title, 
+  mainImage,
   prepTime,
   difficult, 
   description, 

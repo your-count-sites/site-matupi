@@ -1,9 +1,9 @@
-import Container from "@/components/container";
 import Image from "next/image";
 import React from "react";
 import { HeroImage } from "../../../../public/assets";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Container from "@/components/container";
 
 const Hero = () => {
   return (
@@ -33,7 +33,13 @@ const Hero = () => {
               </Button>
             </Link>
           </div>
-          <Image src={HeroImage} width={600} height={600} alt="Matupi" />
+          <Image
+            src={HeroImage}
+            width={600}
+            height={600}
+            alt="Matupi"
+            loading="lazy"
+          />
         </div>
       </Container>
     </section>

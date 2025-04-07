@@ -1,8 +1,31 @@
 import Logo from "./logos/logo-matupi.png";
 import HeroImage from "./images/hero-image.png";
-import Background1 from "./backgrounds/background-1.svg";
-import Background2 from "./backgrounds/background-2.svg";
+import WaveRed from "./backgrounds/wave-red.svg";
+import WaveRedUpsideDown from "./backgrounds/wave-red-upsidedown.svg";
+import Cheeses from "./backgrounds/cheeses-white.svg";
+import Tomato from "./backgrounds/tomato-white.svg";
+import Utensilios from "./backgrounds/utensilios.svg";
+import Saleiro from "./backgrounds/saleiro.svg";
+import Frigideira from "./backgrounds/frigideira.svg";
+import BandeijaComTampa from "./backgrounds/bandeija-com-tampa.svg";
 import EasyIcon from "./svg/easy.svg";
 import MediumIcon from "./svg/medium.svg";
+import HardIcon from "./svg/hard.svg";
+import ConteudosBg from "./backgrounds/banner_conteudos.jpg";
 
-export { Background1, Background2, Logo, HeroImage, EasyIcon, MediumIcon };
+export {
+  WaveRed,
+  WaveRedUpsideDown,
+  Logo,
+  HeroImage,
+  EasyIcon,
+  MediumIcon,
+  HardIcon,
+  Cheeses,
+  Tomato,
+  ConteudosBg,
+  Utensilios,
+  Saleiro,
+  Frigideira,
+  BandeijaComTampa,
+};

@@ -1,14 +1,16 @@
-import Container from "@/components/container";
 import Image from "next/image";
 import React from "react";
-import { Background1 } from "../../../../public/assets";
+import { Cheeses, Tomato, WaveRed } from "../../../../public/assets";
 
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { getRecipes } from "@/sanity/querys/recipes";
 import Link from "next/link";
+import Container from "@/components/container";
 
 const Recipes = async () => {
   const recipes: IRecipe[] = await getRecipes();
+
+  console.log(recipes);
 
   const cards = recipes.map((card, index) => (
     <Link href={`/receitas/${card.slug}`} className="cursor-pointer">
@@ -16,14 +18,29 @@ const Recipes = async () => {
     </Link>
   ));
   return (
-    <section className="w-full relative py-32 mt-[100px]">
+    <section className="w-full relative py-26 mt-[100px] bg-[#F30808]">
       <Image
-        src={Background1}
-        fill
-        className="absolute object-cover -z-10"
+        src={WaveRed}
+        className="absolute -top-10 w-full "
         alt="Receitas"
         quality={100}
+        loading="lazy"
       />
+      <Image
+        src={Tomato}
+        className="absolute -top-2 w-[250px] left-8 "
+        alt="Tomate e folhas"
+        quality={100}
+        loading="lazy"
+      />
+      <Image
+        src={Cheeses}
+        className="absolute w-[250px] right-8 "
+        alt="Queijos"
+        quality={100}
+        loading="lazy"
+      />
+
       <div className="mt-10 ">
         <div className="w-full flex flex-col justify-center">
           <Container>
@@ -49,13 +66,3 @@ const Recipes = async () => {
 };
 
 export default Recipes;
-
-// const recipes = [
-//   { title: "X-Caboquinho" },
-//   { title: "Misto Quente Italiano" },
-//   { title: "Ciabatta Royalle" },
-//   { title: "Pão de queijo recheado" },
-//   { title: "Queijo Coalho Empanado" },
-//   { title: "Bruschetta de abacate com queijo Minas" },
-//   { title: "Escondidinho de carne desfiada gratinada" },
-// ];
