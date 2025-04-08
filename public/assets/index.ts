@@ -1,9 +1,13 @@
 import Logo from "./logos/logo-matupi.png";
 import HeroImage from "./images/hero-image.png";
 import WaveRed from "./backgrounds/wave-red.svg";
+import WaveYellow from "./backgrounds/wave-yellow.svg";
 import WaveRedUpsideDown from "./backgrounds/wave-red-upsidedown.svg";
 import Cheeses from "./backgrounds/cheeses-white.svg";
 import Tomato from "./backgrounds/tomato-white.svg";
+import Pimenta from "./backgrounds/pimenta.svg";
+import Queijo from "./backgrounds/queijo.svg";
+import Queijo2 from "./backgrounds/queijo-2.svg";
 import Utensilios from "./backgrounds/utensilios.svg";
 import Saleiro from "./backgrounds/saleiro.svg";
 import Frigideira from "./backgrounds/frigideira.svg";
@@ -28,4 +32,8 @@ export {
   Saleiro,
   Frigideira,
   BandeijaComTampa,
+  Pimenta,
+  Queijo,
+  Queijo2,
+  WaveYellow,
 };

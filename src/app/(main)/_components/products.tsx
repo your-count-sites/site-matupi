@@ -1,82 +1,55 @@
-import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { products } from "@/constants";
-
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
 import Container from "@/components/container";
+import Image from "next/image";
+import { Pimenta, Queijo } from "../../../../public/assets";
+import CarouselSwiper from "@/components/carousel-swiper";
+import { getProducts } from "@/sanity/querys/products";
 
-const Products = () => {
+const Products = async () => {
+  const products = await getProducts();
+
+  console.log(products);
+
   return (
     <section className="w-full overflow-hidden relative py-52 bg-[#F30808]">
+      <Image
+        src={Pimenta}
+        className="absolute -top-2 w-[200px] rotate-12 "
+        alt="Tomate e folhas"
+        quality={100}
+        loading="lazy"
+      />
+      <Image
+        src={Queijo}
+        className="absolute w-[150px] right-32 top-10 z-20 "
+        alt="Queijos"
+        quality={100}
+        loading="lazy"
+      />
+
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 480 480"
+          className="absolute w-[400px] -right-32 top-[300px] rotate-x-12"
+        >
+          <path
+            d="M360 289.7c43.4 0 86.9-16.6 120-49.7a169.2 169.2 0 0 0-120-49.7 169.2 169.2 0 0 0 49.7-120c-46.9 0-89.3 19-120 49.7 0-43.4-16.6-86.9-49.7-120a169.2 169.2 0 0 0-49.7 120 169.2 169.2 0 0 0-120-49.7c0 46.8 19 89.3 49.7 120-43.4 0-86.9 16.6-120 49.7a169.2 169.2 0 0 0 120 49.7 169.2 169.2 0 0 0-49.7 120c46.8 0 89.3-19 120-49.7 0 43.4 16.6 86.9 49.7 120a169.2 169.2 0 0 0 49.7-120 169.2 169.2 0 0 0 120 49.7c0-46.9-19-89.3-49.7-120Z"
+            fill="#FFF484 "
+          ></path>
+        </svg>
+      </div>
+
       <Container>
         <div className="w-full flex flex-row justify-between items-center">
           <h1 className="text-[4em] max-w-[500px] font-bold text-white">
             Conheça nossos produtos
           </h1>
-
-          <Select>
-            <SelectTrigger className="w-[300px] ">
-              <SelectValue placeholder="Selecione a categoria" />
-            </SelectTrigger>
-            <SelectContent className="bg-white ">
-              <SelectItem value="queijos">Queijos</SelectItem>
-              <SelectItem value="manteigas">Manteigas</SelectItem>
-              <SelectItem value="requeijoes">Requeijões</SelectItem>
-              <SelectItem value="doce-de-leite">Doce de Leite</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="grid grid-cols-3 gap-10 mt-[50px]">
-          {products.map((item, index) => (
-            <div className="flex flex-col gap-3" key={index}>
-              <div className="bg-gray-300 w-full h-[200px]" />
-              <span>{item.title}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="w-full flex flex-row justify-center mt-20">
-          <Pagination>
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious href="#" />
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#">1</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#" isActive>
-                  2
-                </PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#">3</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationEllipsis />
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationNext href="#" />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
         </div>
       </Container>
+
+      <CarouselSwiper products={products} />
+
+      <div className="w-full flex flex-row justify-center mt-20"></div>
     </section>
   );
 };

@@ -24,7 +24,11 @@ const ContentsSection = () => {
             </span>
 
             <h1 className="text-[3.5em] leading-tight text-red-950  font-(family-name:--font-sora)">
-              Acompanhe a Matupi nas redes e viva essa experiência com a gente
+              Acompanhe a{" "}
+              <span className="text-red-600 uppercase font-semibold">
+                Matupi
+              </span>{" "}
+              nas redes e viva essa experiência com a gente
             </h1>
 
             <Button

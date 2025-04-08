@@ -10,8 +10,6 @@ import Container from "@/components/container";
 const Recipes = async () => {
   const recipes: IRecipe[] = await getRecipes();
 
-  console.log(recipes);
-
   const cards = recipes.map((card, index) => (
     <Link href={`/receitas/${card.slug}`} className="cursor-pointer">
       <Card key={index} card={card} index={index} />
