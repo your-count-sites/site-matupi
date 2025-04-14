@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Cheeses, Tomato, WaveRed } from "../../../../public/assets";
+import { Cheeses, Queijo, Tomato, WaveRed } from "../../../../public/assets";
 
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { getRecipes } from "@/sanity/querys/recipes";
@@ -34,6 +34,14 @@ const Recipes = async () => {
       <Image
         src={Cheeses}
         className="absolute w-[250px] right-8 "
+        alt="Queijos"
+        quality={100}
+        loading="lazy"
+      />
+
+      <Image
+        src={Queijo}
+        className="absolute w-[150px] right-50 bottom-5 z-20 "
         alt="Queijos"
         quality={100}
         loading="lazy"

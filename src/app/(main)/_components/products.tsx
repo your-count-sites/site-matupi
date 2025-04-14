@@ -10,18 +10,11 @@ const Products = async () => {
   console.log(products);
 
   return (
-    <section className="w-full overflow-hidden relative py-10 bg-[#F30808]">
+    <section className="w-full overflow-hidden relative py-20 bg-[#F30808]">
       <Image
         src={Pimenta}
-        className="absolute -top-2 w-[200px] rotate-12 "
+        className="absolute -top-2 w-[200px] -left-10 rotate-90 "
         alt="Tomate e folhas"
-        quality={100}
-        loading="lazy"
-      />
-      <Image
-        src={Queijo}
-        className="absolute w-[150px] right-32 top-10 z-20 "
-        alt="Queijos"
         quality={100}
         loading="lazy"
       />
@@ -40,10 +33,25 @@ const Products = async () => {
       </div>
 
       <Container>
-        <div className="w-full flex flex-row justify-between items-center">
-          <h1 className="text-[4em] max-w-[500px] font-bold text-white">
-            Conheça nossos produtos
-          </h1>
+        <div className="flex flex-row justify-between items-center">
+          <div>
+            <span className="text-[#fff484] font-semibold">
+              {" "}
+              Produtos especiais!
+            </span>
+            <div className="w-full flex flex-row justify-between items-center">
+              <h1 className="text-[3em] max-w-[600px] font-bold text-white">
+                Conheça nossos produtos
+              </h1>
+            </div>
+          </div>
+
+          <div className="max-w-[600px]">
+            <span className="text-white text-right font-medium text-xl flex">
+              Temos uma linha completa de produtos feitos com carinho, qualidade
+              e sabor para toda a sua família
+            </span>
+          </div>
         </div>
       </Container>
 

@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable}`}>
+    <html lang="en" className={`${sora.className}`}>
       <body>
         <NavBar />
         <main>{children}</main>
