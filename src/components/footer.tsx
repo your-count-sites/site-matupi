@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full relative py-10 bg-[#Fff484] ${pathname.includes("receitas") ? "mt-0" : "mt-[100px]"}`}
+      className={`w-full relative py-10 bg-[#Fff484] ${pathname.includes("receitas") ? "mt-0" : "mt-0"}`}
     >
       <Image
         src={WaveYellow}

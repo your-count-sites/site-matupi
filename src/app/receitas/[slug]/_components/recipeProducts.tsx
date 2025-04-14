@@ -5,9 +5,7 @@ import React from "react";
 import { WaveRed, WaveYellow } from "../../../../../public/assets";
 import Container from "@/components/container";
 
-const RecipeProducts = async () => {
-  const products = await getProducts();
-
+const RecipeProducts = async ({ products }: { products: any[] }) => {
   return (
     <section className="w-full bg-[#f30808] mt-[200px] py-24 relative">
       <Image

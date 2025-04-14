@@ -23,7 +23,8 @@ export async function getSingleRecipe(slug: string) {
   description, 
   ingredients,
   instructions,
-  servings}[0]`;
+  servings,
+  products[]->{title}}[0]`;
 
   const data = client.fetch(query, {}, options);
 

@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import { ConteudosBg, WaveRedUpsideDown } from "../../../../public/assets";
+import {
+  ConteudosBg,
+  WaveRed,
+  WaveRedUpsideDown,
+} from "../../../../public/assets";
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -14,7 +18,13 @@ const ContentsSection = () => {
         alt="matupi"
         loading="lazy"
       />
-      <Image src={ConteudosBg} alt="Matupi" />
+      <Image
+        src={WaveRed}
+        className="w-full absolute -bottom-1 left-0"
+        alt="matupi"
+        loading="lazy"
+      />
+      <Image src={ConteudosBg} alt="Matupi" className="" />
 
       <div className="w-full absolute z-10 top-32 ">
         <Container>
