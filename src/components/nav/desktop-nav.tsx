@@ -15,7 +15,7 @@ const DesktopNav = () => {
           </Link>
 
           <div className="w-full flex flex-row gap-10 ">
-            <ul className="w-full flex flex-row items-center gap-10 uppercase font-extrabold text-sm text-red-500 justify-end">
+            <ul className="w-full flex flex-row items-center gap-10 uppercase  font-(family-name:--font-sora) font-extrabold text-sm text-red-500 justify-end">
               {NAV_LINKS.map((item, index) => (
                 <Link key={index} href={item.href}>
                   {item.name}
@@ -24,7 +24,7 @@ const DesktopNav = () => {
             </ul>
             <Link
               href={"/"}
-              className="bg-red-500 text-white p-3 rounded-xl w-[20%] flex flex-row justify-center font-bold hover:scale-105 trasnsition-all ease-out duration-300"
+              className="bg-red-500 text-white font-(family-name:--font-sora) p-3 rounded-xl w-[20%] flex flex-row justify-center font-bold hover:scale-105 trasnsition-all ease-out duration-300"
             >
               Compre Agora
             </Link>
