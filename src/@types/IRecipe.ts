@@ -13,12 +13,18 @@ interface Instruction {
   step: number;
 }
 
+interface Product {
+  _key: string;
+  title: string;
+}
+
 interface IRecipe {
   category: string;
   description: string;
   difficult: string;
   ingredients: Ingredient[];
   instructions: Instruction[];
+  products: Product[];
   prepTime: string;
   servings: string;
   slug: Slug;
