@@ -12,6 +12,8 @@ import "../app/(main)/_components/slider.css";
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { IProduct } from "@/@types/IProduct";
+import Image from "next/image";
+import { FotoQueijo } from "../../public/assets";
 
 const CarouselSwiper = ({ products }: { products: IProduct[] }) => {
   return (
@@ -37,16 +39,35 @@ const CarouselSwiper = ({ products }: { products: IProduct[] }) => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        {products.map((item, index) => (
-          <SwiperSlide
-            key={index}
-            className="text-black bg-white rounded-4xl overflow-hidden"
-          >
-            <div className="h-full w-full flex justify-center items-center flex-col">
-              {item.title}
-            </div>
-          </SwiperSlide>
-        ))}
+        {products ? (
+          products.map((item, index) => (
+            <SwiperSlide
+              key={index}
+              className="text-black bg-white rounded-4xl overflow-hidden "
+            >
+              <div className=" w-full h-full flex items-center justify-center flex-col">
+                <div className="flex flex-col gap-8 items-center">
+                  <div className="w-[250px] h-[250px] flex flex-col items-center justify-center">
+                    <Image
+                      src={FotoQueijo}
+                      width={400}
+                      height={50}
+                      alt="manteiga"
+                    />
+                  </div>
+
+                  <h1 className="">{item.title}</h1>
+
+                  <button className="border-2 p-3 rounded-lg text-red-500 border-red-500 px-10 hover:bg-red-500 hover:text-white">
+                    Ver produto
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))
+        ) : (
+          <span className="text-white">Não foi encontrado nenhum produto</span>
+        )}
 
         <div className="slider-controler flex flex-row items-center">
           <div className="swiper-button-prev slider-arrow">

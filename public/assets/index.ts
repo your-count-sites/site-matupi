@@ -1,6 +1,8 @@
 import Logo from "./logos/logo-matupi.png";
 import HeroImage from "./images/hero-image.png";
+import HeroSobre from "./images/hero_sobre_nos.png";
 import WaveRed from "./backgrounds/wave-red.svg";
+import WaveWhite from "./backgrounds/wave-white.svg";
 import WaveYellow from "./backgrounds/wave-yellow.svg";
 import WaveRedUpsideDown from "./backgrounds/wave-red-upsidedown.svg";
 import WaveYellowUpsideDown from "./backgrounds/wave-yellow-upsidedown.svg";
@@ -17,10 +19,12 @@ import EasyIcon from "./svg/easy.svg";
 import MediumIcon from "./svg/medium.svg";
 import HardIcon from "./svg/hard.svg";
 import ConteudosBg from "./backgrounds/banner_conteudos.jpg";
-import HistoriaBg from "./backgrounds/banner_historia.jpg";
+import HistoriaBg from "./backgrounds/banner_historia.webp";
+import FotoQueijo from "./backgrounds/FOTO-QUEIJO.png";
 
 export {
   WaveRed,
+  WaveWhite,
   WaveRedUpsideDown,
   WaveYellowUpsideDown,
   Logo,
@@ -40,4 +44,6 @@ export {
   Queijo2,
   WaveYellow,
   HistoriaBg,
+  FotoQueijo,
+  HeroSobre,
 };

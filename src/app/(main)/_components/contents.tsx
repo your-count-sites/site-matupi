@@ -4,6 +4,7 @@ import {
   ConteudosBg,
   WaveRed,
   WaveRedUpsideDown,
+  WaveWhite,
 } from "../../../../public/assets";
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
@@ -19,8 +20,8 @@ const ContentsSection = () => {
         loading="lazy"
       />
       <Image
-        src={WaveRed}
-        className="w-full absolute -bottom-1 left-0"
+        src={WaveWhite}
+        className="w-full absolute -bottom-10 left-0"
         alt="matupi"
         loading="lazy"
       />

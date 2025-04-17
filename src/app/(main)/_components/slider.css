@@ -19,7 +19,7 @@
 
 .swiper-slide {
   width: 28rem;
-  height: 42rem;
+  height: 32rem;
   position: relative;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .swiper_container {
-  height: 52rem;
+  height: 42rem;
   padding: 2rem 0;
   position: relative;
 }
