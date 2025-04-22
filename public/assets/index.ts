@@ -20,8 +20,6 @@ import MediumIcon from "./svg/medium.svg";
 import HardIcon from "./svg/hard.svg";
 import ConteudosBg from "./backgrounds/banner_conteudos.jpg";
 import HistoriaBg from "./backgrounds/banner_historia.webp";
-import FotoQueijo from "./backgrounds/FOTO-QUEIJO.png";
-
 export {
   WaveRed,
   WaveWhite,
@@ -44,6 +42,5 @@ export {
   Queijo2,
   WaveYellow,
   HistoriaBg,
-  FotoQueijo,
   HeroSobre,
 };

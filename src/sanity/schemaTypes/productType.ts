@@ -33,6 +33,22 @@ export const productType = defineType({
         }),
       ],
     }),
+
+    defineField({
+      name: "nutritionFacts",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        defineField({
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
+        }),
+      ],
+    }),
+
     defineField({
       name: "categories",
       type: "reference",
@@ -59,11 +75,11 @@ export const productType = defineType({
 
     defineField({
       name: "ingredients",
-      type: "blockContent",
+      type: "string",
     }),
     defineField({
       name: "conservation",
-      type: "blockContent",
+      type: "string",
     }),
   ],
 });

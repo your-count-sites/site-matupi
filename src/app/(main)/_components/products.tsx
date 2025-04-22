@@ -7,8 +7,6 @@ import { getProducts } from "@/sanity/querys/products";
 const Products = async () => {
   const products = await getProducts();
 
-  console.log(products);
-
   return (
     <section className="w-full overflow-hidden relative py-20 bg-[#F30808]">
       <Image

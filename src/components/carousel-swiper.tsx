@@ -13,7 +13,9 @@ import "../app/(main)/_components/slider.css";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { IProduct } from "@/@types/IProduct";
 import Image from "next/image";
-import { FotoQueijo } from "../../public/assets";
+import Link from "next/link";
+import { urlFor } from "@/sanity/lib/image";
+import { IconPhoto } from "@tabler/icons-react";
 
 const CarouselSwiper = ({ products }: { products: IProduct[] }) => {
   return (
@@ -47,20 +49,27 @@ const CarouselSwiper = ({ products }: { products: IProduct[] }) => {
             >
               <div className=" w-full h-full flex items-center justify-center flex-col">
                 <div className="flex flex-col gap-8 items-center">
-                  <div className="w-[250px] h-[250px] flex flex-col items-center justify-center">
-                    <Image
-                      src={FotoQueijo}
-                      width={400}
-                      height={50}
-                      alt="manteiga"
-                    />
+                  <div className="w-[300px] h-[250px] flex flex-col items-center justify-center">
+                    {item.mainImage ? (
+                      <Image
+                        src={urlFor(item.mainImage).url()}
+                        width={600}
+                        height={50}
+                        alt="manteiga"
+                      />
+                    ) : (
+                      <IconPhoto />
+                    )}
                   </div>
 
                   <h1 className="">{item.title}</h1>
 
-                  <button className="border-2 p-3 rounded-lg text-red-500 border-red-500 px-10 hover:bg-red-500 hover:text-white">
+                  <Link
+                    href={`/produtos/${item.slug}`}
+                    className="border-2 p-3 rounded-lg text-red-500 border-red-500 px-10 hover:bg-red-500 hover:text-white"
+                  >
                     Ver produto
-                  </button>
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>

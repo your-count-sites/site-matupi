@@ -1,9 +1,5 @@
-interface Warning {
-  message: string;
-}
-
-interface Ingredient {
-  name: string;
+interface Warnings {
+  warnings: string;
   _key: string;
 }
 
@@ -12,10 +8,12 @@ export interface IProduct {
   _updatedAt: string;
   slug: string;
   _createdAt: string;
-  warnings: Warning[];
+  warnings: Warnings[];
   _type: string;
   _id: string;
   title: string;
   _rev: string;
-  ingredients: Ingredient[];
+  ingredients: string;
+  nutritionFacts: string;
+  mainImage: string;
 }
