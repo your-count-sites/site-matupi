@@ -12,7 +12,7 @@ export async function getProducts() {
 }
 
 export async function getSingleProduct(slug: string) {
-  const query = groq`*[_type == "product" && slug.current == '${slug}']{title, slug,  "slug": slug.current, nutritionFacts, ingredients, mainImage, warnings}[0]`;
+  const query = groq`*[_type == "product" && slug.current == '${slug}']{title, slug,  "slug": slug.current, nutritionFacts, ingredients, mainImage, warnings, conservation}[0]`;
 
   const data = client.fetch(query, {}, options);
 

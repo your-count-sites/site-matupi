@@ -16,4 +16,5 @@ export interface IProduct {
   ingredients: string;
   nutritionFacts: string;
   mainImage: string;
+  conservation: string;
 }

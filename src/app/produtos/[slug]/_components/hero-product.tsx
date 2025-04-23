@@ -14,6 +14,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { IProduct } from "@/@types/IProduct";
 import { Cheeses, Tomato } from "../../../../../public/assets";
+import { IconPhoto } from "@tabler/icons-react";
 
 const HeroProduct = ({
   title,
@@ -78,14 +79,18 @@ const HeroProduct = ({
                 fill="#f30808"
               ></path>
             </svg>
-            <div className="p-5 shadow-lg rounded-[20px] border bg-white">
-              <Image
-                src={urlFor(mainImage).url()}
-                alt="Tabela nutricional"
-                width={600}
-                height={200}
-                className="w-[400px] h-[400px] object-cover"
-              />
+            <div className="w-[450px] h-[500px] shadow-lg rounded-[20px] flex flex-row justify-center items-center border bg-white">
+              {mainImage ? (
+                <Image
+                  src={urlFor(mainImage).url()}
+                  alt="Tabela nutricional"
+                  width={600}
+                  height={200}
+                  className="w-[400px] h-[400px] object-cover"
+                />
+              ) : (
+                <IconPhoto />
+              )}
             </div>
           </div>
         </div>
