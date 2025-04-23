@@ -7,6 +7,20 @@ import { Logo, WaveRed, WaveYellow } from "../../public/assets";
 import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Instagram, Youtube } from "lucide-react";
+
+export const SOCIAL_MEDIA = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/grupomatupi/",
+    icon: <Instagram size={25} />,
+  },
+  {
+    name: "Youtube",
+    href: "https://www.youtube.com/@GrupoMatupi",
+    icon: <Youtube size={25} />,
+  },
+];
 
 const Footer = () => {
   const pathname = usePathname();
@@ -41,8 +55,21 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full py-3 border-t-[0.5px] border-b-[0.5px] border-[#F30808]">
+          <div className="w-full flex flex-row justify-between items-center py-3 border-t-[0.5px] border-b-[0.5px] border-[#F30808]">
             <Image src={Logo} width={200} height={200} alt="Matupi" />
+
+            <div className="flex flex-row gap-5">
+              {SOCIAL_MEDIA.map((item, index) => (
+                <Link
+                  href={item.href}
+                  key={index}
+                  className="bg-yellow-100 p-3 rounded-lg"
+                  target="_blank"
+                >
+                  {item.icon}
+                </Link>
+              ))}
+            </div>
           </div>
 
           <div className="py-3">
