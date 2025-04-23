@@ -19,6 +19,7 @@ import EasyIcon from "./svg/easy.svg";
 import MediumIcon from "./svg/medium.svg";
 import HardIcon from "./svg/hard.svg";
 import ConteudosBg from "./backgrounds/banner_conteudos.jpg";
+import ContatoBg from "./backgrounds/banner_contactus.jpg";
 import HistoriaBg from "./backgrounds/banner_historia.webp";
 export {
   WaveRed,
@@ -43,4 +44,5 @@ export {
   WaveYellow,
   HistoriaBg,
   HeroSobre,
+  ContatoBg,
 };

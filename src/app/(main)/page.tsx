@@ -1,3 +1,4 @@
+import ContactUs from "./_components/contact-us";
 import ContentsSection from "./_components/contents";
 import Hero from "./_components/hero";
 import HistorySection from "./_components/history";
@@ -12,6 +13,7 @@ export default function Home() {
       <Products />
       <ContentsSection />
       <HistorySection />
+      <ContactUs />
     </>
   );
 }
