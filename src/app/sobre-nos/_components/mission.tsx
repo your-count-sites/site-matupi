@@ -32,8 +32,11 @@ const Mission = () => {
             Propósito alinhado com o futuro
           </h1>
           <div className="w-full flex flex-row gap-5">
-            {PROPOSALS.map((item) => (
-              <div className="flex flex-col border justify-between overflow-hidden relative h-[260px] w-full bg-white rounded-lg shadow-md text-[#f30808]">
+            {PROPOSALS.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col border justify-between overflow-hidden relative h-[260px] w-full bg-white rounded-lg shadow-md text-[#f30808]"
+              >
                 <div className="flex flex-col gap-1 p-5 ">
                   {item.icon}
                   <h1 className="text-[1.1em] font-semibold mt-5">

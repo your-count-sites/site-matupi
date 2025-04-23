@@ -18,6 +18,7 @@ import Image, { ImageProps } from "next/image";
 import { ArrowBigRight, ArrowRight, Clock } from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
 import { Button } from "./button";
+import { usePathname } from "next/navigation";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -37,6 +38,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -130,8 +133,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         </div>
         <div className="flex justify-between gap-2 ">
           <Button
-            className="group ml-14 bg-transparent border-2 border-white text-white hover:bg-white
-           hover:text-red-500 rounded-full text-xl py-5 px-10 cursor-pointer transition-all duration-200 ease-in"
+            className={`group ml-14 bg-transparent border-2 border-white text-white hover:bg-white
+           hover:text-red-500 rounded-full text-xl py-5 px-10 cursor-pointer transition-all duration-200 ease-in ${pathname === "/receitas" ? "invisible" : ""}`}
           >
             Veja todas as receitas{" "}
             <ArrowRight className="group-hover:translate-x-1.5 transition-all duration-200 ease-in" />

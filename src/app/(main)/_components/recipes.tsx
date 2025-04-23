@@ -6,6 +6,8 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { getRecipes } from "@/sanity/querys/recipes";
 import Link from "next/link";
 import Container from "@/components/container";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Recipes = async () => {
   const recipes: IRecipe[] = await getRecipes();
