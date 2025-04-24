@@ -78,13 +78,7 @@ const CarouselSwiper = ({ products }: { products: IProduct[] }) => {
           <span className="text-white">Não foi encontrado nenhum produto</span>
         )}
 
-        <div className="slider-controler flex flex-row items-center">
-          <div className="swiper-button-prev slider-arrow">
-            <ArrowLeft size={5} />
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <ArrowRight />
-          </div>
+        <div className="slider-controler flex flex-row items-center mt-14">
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>

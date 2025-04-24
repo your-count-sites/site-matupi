@@ -15,15 +15,7 @@ const MainRecipes = async () => {
   ));
 
   return (
-    <section className="w-full relative py-20 bg-[#F30808]">
-      <Image
-        src={WaveRed}
-        className="absolute -top-10 w-full "
-        alt="Receitas"
-        quality={100}
-        loading="lazy"
-      />
-
+    <section className="w-full overflow-hidden relative py-20 bg-[#F30808]">
       <Carousel items={cards} />
     </section>
   );

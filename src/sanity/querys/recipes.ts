@@ -30,3 +30,13 @@ export async function getSingleRecipe(slug: string) {
 
   return data;
 }
+
+export async function getFilteredRecipesByCategory(category: string) {
+  const query = groq`*[_type == "recipe" && category->slug.current == "${category}"]{
+    title, slug,  "slug": slug.current, mainImage,  "category": category->title, prepTime, difficult}
+  `;
+
+  const data = client.fetch(query, {}, options);
+
+  return data;
+}

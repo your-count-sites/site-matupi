@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full relative py-10 bg-[#Fff484] ${pathname.includes("receitas") ? "mt-0" : "mt-0"}`}
+      className={`w-full overflow-hidden relative py-10 bg-[#Fff484] ${pathname.includes("receitas") ? "mt-0" : "mt-0"}`}
     >
       <Image
         src={WaveYellow}
@@ -39,7 +39,7 @@ const Footer = () => {
       />
       <Container>
         <div className="w-full flex flex-col">
-          <div className="flex flex-row justify-between py-10">
+          <div className="flex lg:flex-row flex-col gap-20 justify-between py-10">
             <div className="flex flex-col gap-5 text-[#F30808]">
               <h1 className="text-2xl font-bold">Institucional</h1>
               {NAV_LINKS.map((link, index) => (
@@ -55,10 +55,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full flex flex-row justify-between items-center py-3 border-t-[0.5px] border-b-[0.5px] border-[#F30808]">
+          <div className="w-full flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 py-3 border-t-[0.5px] border-b-[0.5px] border-[#F30808]">
             <Image src={Logo} width={200} height={200} alt="Matupi" />
 
-            <div className="flex flex-row gap-5">
+            <div className="lg:ml-0 ml-5 flex flex-row gap-5">
               {SOCIAL_MEDIA.map((item, index) => (
                 <Link
                   href={item.href}
@@ -74,12 +74,12 @@ const Footer = () => {
 
           <div className="py-3">
             <div className="flex flex-col gap-3">
-              <span className="text-[#f30808] font-semibold">
+              <span className="text-[#f30808] font-normal lg:text-md text-sm">
                 Rodovia Br 230 Transamazonica, 3600 VILA DE MATUPI – MANICORE –
                 AM
               </span>
-              <span className="text-[#f30808] font-semibold">
-                Copyright©2024 | Grupo Matupi | Todos os direitos reservados
+              <span className="text-[#f30808]  font-normal lg:text-md text-sm">
+                Copyright©2025 | Grupo Matupi | Todos os direitos reservados
               </span>
             </div>
 

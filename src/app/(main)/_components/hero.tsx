@@ -1,20 +1,20 @@
 import Image from "next/image";
 import React from "react";
-import { HeroImage } from "../../../../public/assets";
+import { HeroImage, WaveRed } from "../../../../public/assets";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Container from "@/components/container";
 
 const Hero = () => {
   return (
-    <section className="w-full overflow-hidden bg-white py-22 ">
+    <section className="w-full overflow-hidden bg-white pb-32 pt-22 relative">
       <Container>
-        <div className="w-full flex flex-row justify-between">
+        <div className="w-full flex lg:flex-row gap-20 flex-col justify-between">
           <div className="max-w-[600px] flex flex-col gap-3">
             <span className="font-semibold uppercase text-md text-zinc-500">
               Laticínos Matupi
             </span>
-            <h1 className="text-[4em] font-normal text-red-500 font-(family-name:--font-sora) leading-tight ">
+            <h1 className="text-[3em] font-normal text-red-500 font-(family-name:--font-sora) leading-tight ">
               Do campo para a sua mesa, <br />
               com carinho e qualidade.
             </h1>
@@ -42,6 +42,13 @@ const Hero = () => {
           />
         </div>
       </Container>
+      <Image
+        src={WaveRed}
+        className="absolute -bottom-2 w-full "
+        alt="Receitas"
+        quality={100}
+        loading="lazy"
+      />
     </section>
   );
 };

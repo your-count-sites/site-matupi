@@ -18,24 +18,17 @@ const Recipes = async () => {
     </Link>
   ));
   return (
-    <section className="w-full relative py-26 mt-[100px] bg-[#F30808]">
-      <Image
-        src={WaveRed}
-        className="absolute -top-10 w-full "
-        alt="Receitas"
-        quality={100}
-        loading="lazy"
-      />
+    <section className="w-full overflow-hidden relative py-26  bg-[#F30808]">
       <Image
         src={Tomato}
-        className="absolute -top-2 w-[250px] left-8 "
+        className="absolute -top-2 lg:w-[250px] w-[100px] left-8 "
         alt="Tomate e folhas"
         quality={100}
         loading="lazy"
       />
       <Image
         src={Cheeses}
-        className="absolute w-[250px] right-8 "
+        className="absolute lg:w-[250px] w-[100px] right-8 "
         alt="Queijos"
         quality={100}
         loading="lazy"
@@ -43,7 +36,7 @@ const Recipes = async () => {
 
       <Image
         src={Queijo}
-        className="absolute w-[150px] right-50 bottom-5 z-20 "
+        className="absolute lg:w-[150px] w-[60px] lg:right-50 right-10 bottom-5 z-20 "
         alt="Queijos"
         quality={100}
         loading="lazy"
@@ -53,12 +46,12 @@ const Recipes = async () => {
         <div className="w-full flex flex-col justify-center">
           <Container>
             <div className="w-full flex flex-col items-center justify-center gap-3 ">
-              <h1 className="text-white text-center text-[4em]  font-bold">
+              <h1 className="text-white text-center lg:text-[4em] text-[2em] font-bold">
                 As melhores receitas{" "}
                 <span className="text-[#FFF484]">Matupi!</span>
               </h1>
 
-              <p className="text-gray-200 text-2xl font-medium text-center max-w-[800px]">
+              <p className="text-gray-200 lg:text-2xl text-lg font-medium text-center max-w-[800px]">
                 Na Matupi, queremos te inspirar todos os dias! Por isso,
                 reunimos receitas irresistíveis feitas com o carinho e a
                 qualidade dos nossos produtos.

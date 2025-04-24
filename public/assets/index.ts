@@ -21,6 +21,9 @@ import HardIcon from "./svg/hard.svg";
 import ConteudosBg from "./backgrounds/banner_conteudos.jpg";
 import ContatoBg from "./backgrounds/banner_contactus.jpg";
 import HistoriaBg from "./backgrounds/banner_historia.webp";
+import HistoriaBgMobile from "./backgrounds/banner_historia_mobile.png";
+import ContatoBgMobile from "./backgrounds/banner_contactus_mobile.png";
+
 export {
   WaveRed,
   WaveWhite,
@@ -45,4 +48,6 @@ export {
   HistoriaBg,
   HeroSobre,
   ContatoBg,
+  HistoriaBgMobile,
+  ContatoBgMobile,
 };

@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/nav/nav-bar";
 import Footer from "@/components/footer";
 import { Sora } from "next/font/google";
+import ReactQueryProvider from "@/providers/react-query-provider";
 
 const sora = Sora({
   weight: ["400", "700"],
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sora.className}`}>
       <body>
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
+        <ReactQueryProvider>
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+        </ReactQueryProvider>
       </body>
     </html>
   );

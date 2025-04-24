@@ -11,7 +11,7 @@ const Products = async () => {
     <section className="w-full overflow-hidden relative py-20 bg-[#F30808]">
       <Image
         src={Pimenta}
-        className="absolute -top-2 w-[200px] -left-10 rotate-90 "
+        className="absolute -top-2 lg:w-[200px] w-[100px] lg:-left-10 -left-5 rotate-90 "
         alt="Tomate e folhas"
         quality={100}
         loading="lazy"
@@ -21,7 +21,7 @@ const Products = async () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 480 480"
-          className="absolute w-[400px] -right-32 top-[42em] rotate-x-12"
+          className="absolute lg:w-[400px] w-[300px] -right-32 lg:top-[42em] -bottom-28 rotate-x-12"
         >
           <path
             d="M360 289.7c43.4 0 86.9-16.6 120-49.7a169.2 169.2 0 0 0-120-49.7 169.2 169.2 0 0 0 49.7-120c-46.9 0-89.3 19-120 49.7 0-43.4-16.6-86.9-49.7-120a169.2 169.2 0 0 0-49.7 120 169.2 169.2 0 0 0-120-49.7c0 46.8 19 89.3 49.7 120-43.4 0-86.9 16.6-120 49.7a169.2 169.2 0 0 0 120 49.7 169.2 169.2 0 0 0-49.7 120c46.8 0 89.3-19 120-49.7 0 43.4 16.6 86.9 49.7 120a169.2 169.2 0 0 0 49.7-120 169.2 169.2 0 0 0 120 49.7c0-46.9-19-89.3-49.7-120Z"
@@ -31,21 +31,20 @@ const Products = async () => {
       </div>
 
       <Container>
-        <div className="flex flex-row justify-between items-center">
-          <div>
+        <div className="flex lg:flex-row flex-col gap-5 justify-between items-center">
+          <div className="flex flex-col gap-3">
             <span className="text-[#fff484] font-semibold">
-              {" "}
               Produtos especiais!
             </span>
             <div className="w-full flex flex-row justify-between items-center">
-              <h1 className="text-[3em] max-w-[600px] font-bold text-white">
+              <h1 className="lg:text-[3em] text-[2em] max-w-[600px] font-bold text-white">
                 Conheça nossos produtos
               </h1>
             </div>
           </div>
 
           <div className="max-w-[600px]">
-            <span className="text-white text-right font-medium text-xl flex">
+            <span className="text-white lg:text-right text-left font-medium text-xl flex">
               Temos uma linha completa de produtos feitos com carinho, qualidade
               e sabor para toda a sua família
             </span>

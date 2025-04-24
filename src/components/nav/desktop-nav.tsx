@@ -9,7 +9,7 @@ const DesktopNav = () => {
   return (
     <nav className="">
       <Container>
-        <div className="w-full flex flex-row justify-between items-center py-4 ">
+        <div className="w-full lg:flex hidden flex-row justify-between items-center py-4 ">
           <Link href={"/"}>
             <Image src={Logo} width={200} height={50} alt="Matupi" />
           </Link>

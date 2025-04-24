@@ -103,7 +103,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
           <div
             className={cn(
-              "flex flex-row justify-start gap-10 pl-10 ",
+              "flex flex-row justify-start gap-5 pl-10 ",
               " mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
             )}
           >
@@ -131,16 +131,16 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between gap-2 ">
+        <div className="flex flex-row justify-between gap-2 items-center">
           <Button
-            className={`group ml-14 bg-transparent border-2 border-white text-white hover:bg-white
-           hover:text-red-500 rounded-full text-xl py-5 px-10 cursor-pointer transition-all duration-200 ease-in ${pathname === "/receitas" ? "invisible" : ""}`}
+            className={`group lg:ml-14 ml-10 bg-transparent border-2 border-white text-white hover:bg-white
+           hover:text-red-500 rounded-full lg:text-xl text-sm py-5 px-10 cursor-pointer transition-all duration-200 ease-in ${pathname === "/receitas" ? "invisible" : ""}`}
           >
             Veja todas as receitas{" "}
             <ArrowRight className="group-hover:translate-x-1.5 transition-all duration-200 ease-in" />
           </Button>
 
-          <div className="flex flex-row gap-2 mr-10">
+          <div className="lg:flex hidden flex-row gap-2 lg:mr-10 mr-5 ">
             <button
               className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
               onClick={scrollLeft}
@@ -205,33 +205,33 @@ export const Card = ({
     <div>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 cursor-pointer hover:scale-105 transition-all ease-out duration-300 h-10 w-56 md:h-[30em] md:w-[400px] overflow-hidden flex flex-col items-start justify-end relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 cursor-pointer hover:scale-105 transition-all ease-out duration-300  h-[24em] w-[300px] md:h-[30em] md:w-[400px] overflow-hidden flex flex-col items-start justify-end relative z-10"
       >
-        <div className="absolute h-full top-0 inset-x-0  z-30 pointer-events-none" />
-        <div className="relative z-40 p-8 w-full">
+        <div className="absolute h-full top-0 inset-x-0 z-30 pointer-events-none" />
+        <div className="relative z-40 p-5 w-full">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-red-500 font-semibold text-xl md:text-xl font-sans text-left"
+            className="text-red-500 font-semibold text-sm md:text-xl font-sans text-left"
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-zinc-500 text-lg w-full md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            className="text-zinc-500 text-md w-full  md:text-xl font-semibold  text-left [text-wrap:balance] font-sans mt-2"
           >
             {card.title}
           </motion.p>
 
-          <div className="w-full flex flex-row justify-between mt-5">
+          <div className="w-full flex lg:flex-row flex-col justify-between mt-5">
             <motion.p
               layoutId={layout ? `title-${card.title}` : undefined}
-              className="text-zinc-600 text-lg md:text-lg flex flex-row gap-2 items-center font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+              className="text-zinc-600 lg:text-lg text-sm md:text-lg flex flex-row gap-2 items-center font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
             >
               <Clock size={20} color="red" /> {card.prepTime}
             </motion.p>
             <motion.p
               layoutId={layout ? `title-${card.title}` : undefined}
-              className="text-red-600 text-lg md:text-lg flex flex-row gap-2 items-center font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+              className="text-red-600 lg:text-lg md:text-lg text-md flex flex-row gap-2 items-center font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
             >
               {card.difficult}
             </motion.p>
