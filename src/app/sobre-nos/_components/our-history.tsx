@@ -1,7 +1,7 @@
 import Container from "@/components/container";
 import Image from "next/image";
 import React from "react";
-import { WaveWhite } from "../../../../public/assets";
+import { FabricaMatupi, WaveWhite } from "../../../../public/assets";
 
 const OurHistory = () => {
   return (
@@ -32,6 +32,17 @@ const OurHistory = () => {
               uma laticínios reconhecida pelo cuidado em cada etapa — do campo
               até a sua mesa.
             </p>
+          </div>
+
+          <div>
+            <Image
+              src={FabricaMatupi}
+              width={600}
+              height={400}
+              quality={100}
+              loading="lazy"
+              alt="Sobre"
+            />
           </div>
         </div>
       </Container>

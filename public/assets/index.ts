@@ -1,5 +1,7 @@
 import Logo from "./logos/logo-matupi.png";
 import HeroImage from "./images/hero-image.png";
+import FabricaMatupi from "./images/fabrica-matupi.png";
+import ImageEmploye from "./images/image-employe.png";
 import HeroSobre from "./images/hero_sobre_nos.png";
 import WaveRed from "./backgrounds/wave-red.svg";
 import WaveWhite from "./backgrounds/wave-white.svg";
@@ -52,4 +54,6 @@ export {
   HistoriaBgMobile,
   ContatoBgMobile,
   BannerProposito,
+  ImageEmploye,
+  FabricaMatupi,
 };
