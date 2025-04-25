@@ -18,10 +18,10 @@ const FilteredRecipes = () => {
   const [category, setCategory] = React.useState("salgadas");
 
   return (
-    <section className="w-full py-20 overflow-hidden relative">
+    <section className="w-full py-20  relative">
       <Image
         src={WaveWhite}
-        className="absolute -top-10 w-full "
+        className="absolute lg:-top-10 -top-3 w-full "
         alt="Receitas"
         quality={100}
         loading="lazy"
@@ -43,7 +43,7 @@ const FilteredRecipes = () => {
             ))}
           </div> */}
 
-          <div className="flex space-x-2 mb-4">
+          <div className="flex w-full justify-center items-center space-x-2 mb-4">
             <Button
               variant={category === "salgadas" ? "default" : "outline"}
               onClick={() => setCategory("salgadas")}

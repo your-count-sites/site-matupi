@@ -14,11 +14,11 @@ import Link from "next/link";
 
 const ContactUs = () => {
   return (
-    <section className="w-full overflow-hidden relative py-20">
+    <section className="w-full overflow-hidden relative ">
       <Image src={ContatoBg} alt="Matupi" className="lg:flex hidden" />
       <Image src={ContatoBgMobile} alt="Matupi" className="lg:hidden flex" />
 
-      <div className="w-full absolute z-10 top-32 ">
+      <div className="w-full absolute z-10 top-5 ">
         <Container>
           <div className="flex lg:flex-row flex-col w-full h-[700px] lg:justify-start lg:items-center justify-end">
             <div className="flex flex-col gap-5 max-w-[500px]">
@@ -50,7 +50,7 @@ const ContactUs = () => {
         </Container>
       </div>
 
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 480 480"
         className="absolute lg:w-[400px] hidden -right-32 -top-52 rotate-x-12 z-20"
@@ -59,9 +59,9 @@ const ContactUs = () => {
           d="M360 289.7c43.4 0 86.9-16.6 120-49.7a169.2 169.2 0 0 0-120-49.7 169.2 169.2 0 0 0 49.7-120c-46.9 0-89.3 19-120 49.7 0-43.4-16.6-86.9-49.7-120a169.2 169.2 0 0 0-49.7 120 169.2 169.2 0 0 0-120-49.7c0 46.8 19 89.3 49.7 120-43.4 0-86.9 16.6-120 49.7a169.2 169.2 0 0 0 120 49.7 169.2 169.2 0 0 0-49.7 120c46.8 0 89.3-19 120-49.7 0 43.4 16.6 86.9 49.7 120a169.2 169.2 0 0 0 49.7-120 169.2 169.2 0 0 0 120 49.7c0-46.9-19-89.3-49.7-120Z"
           fill="#F30808 "
         ></path>
-      </svg>
+      </svg> */}
 
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 480 480"
         className="absolute lg:w-[400px] w-[00px] -right-32 top-[10em] rotate-x-12"
@@ -70,7 +70,7 @@ const ContactUs = () => {
           d="M360 289.7c43.4 0 86.9-16.6 120-49.7a169.2 169.2 0 0 0-120-49.7 169.2 169.2 0 0 0 49.7-120c-46.9 0-89.3 19-120 49.7 0-43.4-16.6-86.9-49.7-120a169.2 169.2 0 0 0-49.7 120 169.2 169.2 0 0 0-120-49.7c0 46.8 19 89.3 49.7 120-43.4 0-86.9 16.6-120 49.7a169.2 169.2 0 0 0 120 49.7 169.2 169.2 0 0 0-49.7 120c46.8 0 89.3-19 120-49.7 0 43.4 16.6 86.9 49.7 120a169.2 169.2 0 0 0 49.7-120 169.2 169.2 0 0 0 120 49.7c0-46.9-19-89.3-49.7-120Z"
           fill="#F30808 "
         ></path>
-      </svg>
+      </svg> */}
     </section>
   );
 };

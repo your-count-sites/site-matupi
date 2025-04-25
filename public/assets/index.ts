@@ -19,6 +19,7 @@ import EasyIcon from "./svg/easy.svg";
 import MediumIcon from "./svg/medium.svg";
 import HardIcon from "./svg/hard.svg";
 import ConteudosBg from "./backgrounds/banner_conteudos.jpg";
+import BannerProposito from "./backgrounds/banner_proposito.jpg";
 import ContatoBg from "./backgrounds/banner_contactus.jpg";
 import HistoriaBg from "./backgrounds/banner_historia.webp";
 import HistoriaBgMobile from "./backgrounds/banner_historia_mobile.png";
@@ -50,4 +51,5 @@ export {
   ContatoBg,
   HistoriaBgMobile,
   ContatoBgMobile,
+  BannerProposito,
 };

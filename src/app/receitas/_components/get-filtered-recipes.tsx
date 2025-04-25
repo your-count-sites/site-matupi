@@ -60,7 +60,7 @@ export default function GetFilteredRecipes({ category }: { category: string }) {
   ));
 
   return (
-    <div className="p-4">
+    <div className="">
       <Carousel items={cards} />
     </div>
   );
