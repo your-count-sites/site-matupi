@@ -6,7 +6,7 @@ const Definitions = ({ ingredients, conservation }: IProduct) => {
   return (
     <section className="w-full overflow-hidden py-20 ">
       <Container>
-        <div className="w-full flex justify-between gap-20">
+        <div className="w-full flex lg:flex-row flex-col justify-between gap-20">
           <div className="flex flex-col gap-3 max-w-[700px]">
             <h1 className="text-xl font-bold text-[#f30808]">Ingredientes</h1>
             <div className="flex flex-col gap-5">

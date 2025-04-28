@@ -25,9 +25,9 @@ const HeroProduct = ({
   return (
     <section className="w-full overflow-hidden py-20 relative">
       <Container>
-        <div className="w-full flex flex-row justify-between items-center">
+        <div className="w-full flex lg:flex-row flex-col gap-10 justify-between items-center">
           <div className="flex flex-col gap-8">
-            <h1 className="text-[4em] font-normal text-[#f30808] max-w-[600px]">
+            <h1 className="lg:text-[4em] text-[2.5em] font-normal text-[#f30808] max-w-[600px]">
               {title}
             </h1>
             <Dialog>
@@ -72,14 +72,14 @@ const HeroProduct = ({
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 480 480"
-              className="absolute -top-24 right-40 w-[580px] h-[800px] -z-10"
+              className="lg:flex hidden absolute -top-24 right-40 w-[580px] h-[800px] -z-10"
             >
               <path
                 d="M437.3 158.3A99.5 99.5 0 0 0 321.6 42.8a99.5 99.5 0 0 0-163.4 0A99.5 99.5 0 0 0 42.7 158.3a99.5 99.5 0 0 0 0 163.4 99.5 99.5 0 0 0 115.6 115.6 99.5 99.5 0 0 0 163.4 0 99.5 99.5 0 0 0 115.5-115.6 99.5 99.5 0 0 0 0-163.4Z"
                 fill="#f30808"
               ></path>
             </svg>
-            <div className="w-[450px] h-[500px] shadow-lg rounded-[20px] flex flex-row justify-center items-center border bg-white">
+            <div className="lg:w-[450px] lg:h-[500px] md:w-[450px] md:h-[500px] w-[300px] h-[400px] shadow-lg rounded-[20px] flex flex-row justify-center items-center border bg-white">
               {mainImage ? (
                 <Image
                   src={urlFor(mainImage).url()}
