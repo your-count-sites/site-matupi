@@ -111,7 +111,12 @@ const Servicos = () => {
                       Ou entre em contato pelas redes:
                     </h1>
                     <div className="flex flex-row gap-5">
-                      <Link href={"/"} className="p-2 bg-[#f30808] rounded-lg">
+                      <Link
+                        href={
+                          "https://api.whatsapp.com/send/?phone=559292711900&text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20um%20representante%20Matupi!&type=phone_number&app_absent=0"
+                        }
+                        className="p-2 bg-[#f30808] rounded-lg"
+                      >
                         <FaWhatsapp size={25} color="#fff" />
                       </Link>
 
