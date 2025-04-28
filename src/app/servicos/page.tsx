@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ContatoBg, ServiceBanner } from "../../../public/assets";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Insira seu nome"),
@@ -82,18 +83,58 @@ const Servicos = () => {
         <Container>
           <div className="w-full ">
             <Container>
-              <div className="w-full flex flex-row justify-end py-32">
+              <div className="w-full flex flex-row justify-between py-32">
+                <div className="flex flex-col gap-5 w-[40%]">
+                  <span className="text-lg text-zinc-800">SOMOS MATUPI</span>
+                  <h1 className="text-4xl font-semibold text-[#f30808]">
+                    Seja um Parceiro Matupi
+                  </h1>
+                  <span className="text-lg text-zinc-600">
+                    Preencha o formulário abaixo e nossa equipe comercial
+                    entrará em contato para apresentar nossas linhas de
+                    laticínios e condições especiais para parceiros. Estamos
+                    ansiosos para crescer junto com o seu negócio!
+                  </span>
+
+                  <div className="flex flex-col gap-5 mt-8">
+                    <h1 className="text-xl font-normal">
+                      Ou entre em contato pelas redes:
+                    </h1>
+                    <div className="flex flex-row gap-5">
+                      <Link href={"/"} className="p-2 bg-[#f30808] rounded-lg">
+                        <FaWhatsapp size={25} color="#fff" />
+                      </Link>
+
+                      <Link
+                        href={"https://www.instagram.com/grupomatupi/"}
+                        className="p-2 bg-[#f30808] rounded-lg"
+                      >
+                        <FaInstagram size={25} color="#fff" />
+                      </Link>
+
+                      <Link
+                        href={
+                          "https://www.facebook.com/grupomatupi?locale=pt_BR"
+                        }
+                        className="p-2 bg-[#f30808] rounded-lg"
+                      >
+                        <FaFacebookF size={25} color="#fff" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
                 <form
                   className="w-[500px] flex flex-col gap-8"
                   onSubmit={handleSubmit(onSubmit)}
                 >
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="" className="text-zinc-400">
+                    <label htmlFor="" className="text-zinc-600">
                       NOME COMPLETO *
                     </label>
                     <input
                       type="text"
-                      className="rounded-md p-3 border-2 outline-none w-full"
+                      className="rounded-md p-3 border border-zinc-600 outline-none w-full"
                       {...register("name")}
                     />
                     <span className="text-red-700 p-3">
@@ -101,12 +142,12 @@ const Servicos = () => {
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="" className="text-zinc-400">
+                    <label htmlFor="" className="text-zinc-600">
                       E-MAIL*
                     </label>
                     <input
                       type="email"
-                      className="rounded-md p-3 border-2 outline-none w-full"
+                      className="rounded-md p-3 border border-zinc-600 outline-none w-full"
                       {...register("email")}
                     />
                     <span className="text-red-700 p-3">
@@ -114,12 +155,12 @@ const Servicos = () => {
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="" className="text-zinc-400">
+                    <label htmlFor="" className="text-zinc-600">
                       TELEFONE *
                     </label>
                     <input
                       type="tel"
-                      className="rounded-md p-3 border-2 outline-none w-full"
+                      className="rounded-md p-3 border border-zinc-600 outline-none w-full"
                       {...register("phone")}
                     />
                     <span className="text-red-700 p-3">
