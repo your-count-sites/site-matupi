@@ -11,6 +11,19 @@ import { ContatoBg, ServiceBanner } from "../../../public/assets";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { toast } from "sonner";
+import Market from "@/components/svg/market";
+import Bakery from "@/components/svg/bakery";
+import Restaurant from "@/components/svg/restaurant";
+import Supermarket from "@/components/svg/supermarket";
+import Emporium from "@/components/svg/emporium";
+
+const BUSINESS = [
+  { name: "Mercado", icon: <Market /> },
+  { name: "Padaria", icon: <Bakery /> },
+  { name: "Restaurante", icon: <Restaurant /> },
+  { name: "Supermercado", icon: <Supermarket /> },
+  { name: "Empório", icon: <Emporium /> },
+];
 
 const contactSchema = z.object({
   name: z.string().min(1, "Insira seu nome"),
@@ -94,6 +107,22 @@ const Servicos = () => {
           </Container>
         </div>
         <Image src={ServiceBanner} alt="Matupi" className="lg:flex hidden" />
+      </section>
+
+      <section className="w-full overflow-hidden py-26">
+        <Container>
+          <div className="w-full flex flex-col gap-14">
+            <h1 className="text-3xl">Se seu negócio é</h1>
+            <div className="w-full flex flex-row gap-5 justify-between">
+              {BUSINESS.map((item) => (
+                <div className="flex flex-col items-center gap-5">
+                  {item.icon}
+                  <h2 className="text-lg">{item.name}</h2>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
       </section>
 
       <section className="w-full overflow-hidden" id="form">
