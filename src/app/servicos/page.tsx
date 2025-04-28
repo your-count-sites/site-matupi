@@ -67,19 +67,19 @@ const Servicos = () => {
         <div className="w-full absolute z-10 top-5">
           <Container>
             <div className="w-full flex flex-row justify-end py-32">
-              <div className="flex flex-col gap-5 max-w-[700px]">
+              <div className="flex flex-col gap-5 max-w-[800px]">
                 <span className="text-zinc-500 lg:text-md text-sm font-semibold uppercase  font-(family-name:--font-sora)">
                   Fale com um Representante Matupi
                 </span>
 
                 <h1 className="lg:text-[3.5em] text-[2em] leading-tight text-[#f30808]  font-(family-name:--font-sora)">
-                  Conecte-se com Nossa Equipe Comercial
+                  Leve os sabores da Matupi para o seu negócio.
                 </h1>
 
                 <h2 className="lg:text-xl text-md text-[#f30808]">
                   Escolha o canal ideal para entrar em contato com um
                   representante e descubra como levar os sabores da Matupi para
-                  o seu negócio.
+                  suas prateleiras.
                 </h2>
 
                 <Link
