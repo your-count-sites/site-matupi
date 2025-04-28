@@ -72,18 +72,24 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="py-3">
+          <div className="py-3 flex flex-row justify-between items-center">
             <div className="flex flex-col gap-3">
               <span className="text-[#f30808] font-normal lg:text-md text-sm">
-                Rodovia Br 230 Transamazonica, 3600 VILA DE MATUPI – MANICORE –
-                AM
+                Rua do Igarapé, 70, Taruma-Açu – Manaus – AM, 69022-458
               </span>
               <span className="text-[#f30808]  font-normal lg:text-md text-sm">
                 Copyright©2025 | Grupo Matupi | Todos os direitos reservados
               </span>
             </div>
 
-            <div></div>
+            <div>
+              <Link
+                href={"/politica-de-privacidade"}
+                className="underline text-[#f30808]"
+              >
+                Política de privacidade
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

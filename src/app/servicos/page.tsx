@@ -16,6 +16,13 @@ const contactSchema = z.object({
   name: z.string().min(1, "Insira seu nome"),
   email: z.string().min(1, "Insira o seu e-mail"),
   phone: z.string().min(1, "Insira seu telefone"),
+  company: z.string().min(1, "Insira sua empresa"),
+  privacyPolicy: z
+    .boolean()
+    .refine(
+      (value) => value === true,
+      "Você deve concordar com as políticas de privacidade"
+    ),
 });
 
 export type ContactSchema = z.infer<typeof contactSchema>;
@@ -76,7 +83,7 @@ const Servicos = () => {
                 </h2>
 
                 <Link
-                  href={"/sobre-nos"}
+                  href={"/servicos/#form"}
                   className="group w-fit bg-transparent text-[#f30808] border-2  border-[#f30808] rounded-full flex flex-row gap-3 py-3 items-center text-xl 
               hover:bg-[#f30808] hover:text-white cursor-pointer px-10"
                 >
@@ -89,7 +96,7 @@ const Servicos = () => {
         <Image src={ServiceBanner} alt="Matupi" className="lg:flex hidden" />
       </section>
 
-      <section className="w-full overflow-hidden">
+      <section className="w-full overflow-hidden" id="form">
         <Container>
           <div className="w-full ">
             <Container>
@@ -140,7 +147,7 @@ const Servicos = () => {
                 </div>
 
                 <form
-                  className="w-[500px] flex flex-col gap-8"
+                  className="w-[500px] flex flex-col gap-5"
                   onSubmit={handleSubmit(onSubmit)}
                 >
                   <div className="flex flex-col gap-2">
@@ -152,7 +159,7 @@ const Servicos = () => {
                       className="rounded-md p-3 border border-zinc-600 outline-none w-full"
                       {...register("name")}
                     />
-                    <span className="text-red-700 p-3">
+                    <span className="text-red-700 p-1">
                       {errors.name?.message}
                     </span>
                   </div>
@@ -165,7 +172,7 @@ const Servicos = () => {
                       className="rounded-md p-3 border border-zinc-600 outline-none w-full"
                       {...register("email")}
                     />
-                    <span className="text-red-700 p-3">
+                    <span className="text-red-700 p-1">
                       {errors.email?.message}
                     </span>
                   </div>
@@ -178,8 +185,40 @@ const Servicos = () => {
                       className="rounded-md p-3 border border-zinc-600 outline-none w-full"
                       {...register("phone")}
                     />
-                    <span className="text-red-700 p-3">
+                    <span className="text-red-700 p-1">
                       {errors.phone?.message}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="" className="text-zinc-600">
+                      EMPRESA *
+                    </label>
+                    <input
+                      type="tel"
+                      className="rounded-md p-3 border border-zinc-600 outline-none w-full"
+                      {...register("company")}
+                    />
+                    <span className="text-red-700 p-1">
+                      {errors.company?.message}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col ">
+                    <div className="flex flex-row gap-3">
+                      <input type="checkbox" {...register("privacyPolicy")} />
+                      <label htmlFor="">
+                        Li e concordo com a{" "}
+                        <Link
+                          href={"/politica-de-privacidade"}
+                          className="underline hover:text-[#f30808]"
+                        >
+                          Política de privacidade
+                        </Link>
+                      </label>
+                    </div>
+                    <span className="text-red-700 p-3">
+                      {errors.privacyPolicy?.message}
                     </span>
                   </div>
 
