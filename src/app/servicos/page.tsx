@@ -1,6 +1,6 @@
 "use client";
 import Container from "@/components/container";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -10,6 +10,7 @@ import Image from "next/image";
 import { ContatoBg, ServiceBanner } from "../../../public/assets";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { toast } from "sonner";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Insira seu nome"),
@@ -20,9 +21,12 @@ const contactSchema = z.object({
 export type ContactSchema = z.infer<typeof contactSchema>;
 
 const Servicos = () => {
+  const [isLoading, setLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(contactSchema),
@@ -30,6 +34,7 @@ const Servicos = () => {
 
   const onSubmit = async (data: ContactSchema) => {
     try {
+      setLoading(true);
       await axios
         .post("/api", {
           name: data.name,
@@ -39,6 +44,11 @@ const Servicos = () => {
         .then((response) => {
           return response.data;
         });
+      reset();
+      toast(
+        "Obrigado por nos enviar seu contato. Entraremos em contato o mais breve possível"
+      );
+      setLoading(false);
     } catch (error) {
       return error;
     }
@@ -170,7 +180,7 @@ const Servicos = () => {
 
                   <Button className="py-8 hover:opacity-80" type="submit">
                     <span className="text-white text-xl font-semibold ">
-                      Salvar
+                      {isLoading ? <div className="loader"></div> : "Salvar"}
                     </span>
                   </Button>
                 </form>

@@ -131,3 +131,37 @@
     0 0
   );
 }
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+  0% {
+    box-shadow:
+      20px 0 #fff,
+      -20px 0 #fff2;
+    background: #fff;
+  }
+  33% {
+    box-shadow:
+      20px 0 #fff,
+      -20px 0 #fff2;
+    background: #0002;
+  }
+  66% {
+    box-shadow:
+      20px 0 #fff2,
+      -20px 0 #fff;
+    background: #0002;
+  }
+  100% {
+    box-shadow:
+      20px 0 #fff2,
+      -20px 0 #fff;
+    background: #fff;
+  }
+}

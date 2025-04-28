@@ -4,6 +4,7 @@ import NavBar from "@/components/nav/nav-bar";
 import Footer from "@/components/footer";
 import { Sora } from "next/font/google";
 import ReactQueryProvider from "@/providers/react-query-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const sora = Sora({
   weight: ["400", "700"],
@@ -28,6 +29,7 @@ export default function RootLayout({
         <ReactQueryProvider>
           <NavBar />
           <main>{children}</main>
+          <Toaster />
           <Footer />
         </ReactQueryProvider>
       </body>
