@@ -10,6 +10,8 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/container";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
+import { WaveRed } from "../../../../public/assets";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Insira seu nome"),
@@ -61,7 +63,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="w-full overflow-hidden mt-10" id="form">
+    <section className="w-full overflow-hidden mt-10 relative py-20" id="form">
       <div className="w-full ">
         <Container>
           <div className="w-full flex lg:flex-row flex-col gap-14 justify-between pb-32">
@@ -193,6 +195,13 @@ const ContactForm = () => {
           </div>
         </Container>
       </div>
+      <Image
+        src={WaveRed}
+        className="absolute -bottom-2 w-full "
+        alt="Receitas"
+        quality={100}
+        loading="lazy"
+      />
     </section>
   );
 };
