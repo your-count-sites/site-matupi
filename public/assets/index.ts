@@ -27,6 +27,7 @@ import HistoriaBg from "./backgrounds/banner_historia.webp";
 import HistoriaBgMobile from "./backgrounds/banner_historia_mobile.png";
 import ContatoBgMobile from "./backgrounds/banner_contactus_mobile.png";
 import ServiceBanner from "./backgrounds/servicos.png";
+import ServiceBannerMobile from "./backgrounds/servicos-mobile.png";
 
 export {
   WaveRed,
@@ -58,4 +59,5 @@ export {
   ImageEmploye,
   FabricaMatupi,
   ServiceBanner,
+  ServiceBannerMobile,
 };

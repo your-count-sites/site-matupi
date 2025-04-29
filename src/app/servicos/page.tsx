@@ -7,7 +7,11 @@ import { z } from "zod";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { ContatoBg, ServiceBanner } from "../../../public/assets";
+import {
+  ContatoBg,
+  ServiceBanner,
+  ServiceBannerMobile,
+} from "../../../public/assets";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { toast } from "sonner";
@@ -76,15 +80,14 @@ const Servicos = () => {
 
   return (
     <main className="w-full overflow-hidden  ">
-      <section className="w-full overflow-hidden relative">
+      <section className="w-full  relative ">
         <div className="w-full absolute z-10 top-5">
           <Container>
-            <div className="w-full flex flex-row justify-end py-32">
-              <div className="flex flex-col gap-5 max-w-[800px]">
+            <div className="flex lg:flex-row flex-col w-full h-[800px] lg:justify-end lg:items-center justify-end">
+              <div className="flex flex-col gap-5 max-w-[600px]">
                 <span className="text-zinc-500 lg:text-md text-sm font-semibold uppercase  font-(family-name:--font-sora)">
                   Fale com um Representante Matupi
                 </span>
-
                 <h1 className="lg:text-[3.5em] text-[2em] leading-tight text-[#f30808]  font-(family-name:--font-sora)">
                   Leve os sabores da Matupi para o seu negócio.
                 </h1>
@@ -107,13 +110,20 @@ const Servicos = () => {
           </Container>
         </div>
         <Image src={ServiceBanner} alt="Matupi" className="lg:flex hidden" />
+        <Image
+          src={ServiceBannerMobile}
+          alt="Matupi"
+          className="lg:hidden flex"
+        />
       </section>
 
-      <section className="w-full overflow-hidden py-26">
+      <section className="w-full overflow-hidden mt-[100px] py-26 ">
         <Container>
           <div className="w-full flex flex-col gap-14">
-            <h1 className="text-3xl">Se seu negócio é</h1>
-            <div className="w-full flex flex-row gap-5 justify-between">
+            <h1 className="lg:text-3xl text-xl max-w-[500px] ">
+              Os produtos Matupi são perfeitos para o seu negócio
+            </h1>
+            <div className="w-full flex lg:flex-row flex-col gap-14 justify-between">
               {BUSINESS.map((item) => (
                 <div className="flex flex-col items-center gap-5">
                   {item.icon}
@@ -129,10 +139,12 @@ const Servicos = () => {
         <Container>
           <div className="w-full ">
             <Container>
-              <div className="w-full flex flex-row justify-between py-32">
-                <div className="flex flex-col gap-5 w-[40%]">
-                  <span className="text-lg text-zinc-800">SOMOS MATUPI</span>
-                  <h1 className="text-4xl font-semibold text-[#f30808]">
+              <div className="w-full flex lg:flex-row flex-col gap-14 justify-between pb-32">
+                <div className="flex flex-col gap-5 lg:w-[40%] w-full">
+                  <span className="lg:text-lg text-sm text-zinc-800">
+                    SOMOS MATUPI
+                  </span>
+                  <h1 className="lg:text-4xl text-2xl font-semibold text-[#f30808]">
                     Seja um Parceiro Matupi
                   </h1>
                   <span className="text-lg text-zinc-600">
@@ -176,7 +188,7 @@ const Servicos = () => {
                 </div>
 
                 <form
-                  className="w-[500px] flex flex-col gap-5"
+                  className="lg:w-[500px] w-full flex flex-col gap-5"
                   onSubmit={handleSubmit(onSubmit)}
                 >
                   <div className="flex flex-col gap-2">
