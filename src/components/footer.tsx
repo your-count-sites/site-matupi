@@ -8,17 +8,33 @@ import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Instagram, Youtube } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 export const SOCIAL_MEDIA = [
   {
     name: "Instagram",
     href: "https://www.instagram.com/grupomatupi/",
-    icon: <Instagram size={25} />,
+    icon: <FaInstagram size={25} />,
   },
   {
     name: "Youtube",
     href: "https://www.youtube.com/@GrupoMatupi",
-    icon: <Youtube size={25} />,
+    icon: <FaYoutube size={25} />,
+  },
+  {
+    name: "Whatsapp",
+    href: "https://api.whatsapp.com/send/?phone=559292711900&text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20um%20representante%20Matupi!&type=phone_number&app_absent=0",
+    icon: <FaWhatsapp size={25} />,
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/grupomatupi?locale=pt_BR",
+    icon: <FaFacebookF size={25} />,
   },
 ];
 
@@ -32,7 +48,7 @@ const Footer = () => {
     >
       <Image
         src={WaveYellow}
-        className="absolute -top-10 w-full "
+        className="absolute lg:-top-10  -top-3  w-full "
         alt="Footer"
         quality={100}
         loading="lazy"
@@ -72,7 +88,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="py-3 flex flex-row justify-between items-center">
+          <div className="py-3 flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 text-sm">
             <div className="flex flex-col gap-3">
               <span className="text-[#f30808] font-normal lg:text-md text-sm">
                 Rua do Igarapé, 70, Taruma-Açu – Manaus – AM, 69022-458
