@@ -67,7 +67,7 @@ const Footer = () => {
             <div className="flex flex-col gap-5 text-[#F30808]">
               <h1 className="text-2xl font-bold">Entre em contato</h1>
               <span className="">contato@laticiniomatupi.com.br</span>
-              <span>(69) 9936-0370</span>
+              <span>(92) 99271 1900</span>
             </div>
           </div>
 
