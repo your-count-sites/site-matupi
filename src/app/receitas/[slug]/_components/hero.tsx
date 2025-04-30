@@ -6,7 +6,7 @@ import {
   ForkKnife,
 } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 import {
   BandeijaComTampa,
   Cheeses,
@@ -80,13 +80,15 @@ const HeroRecipe = ({ recipe }: { recipe: IRecipe }) => {
           <div className="relative h-[500px] w-[600px] flex items-center justify-center">
             <div className=" absolute top-14 right-0 h-full w-full rounded-2xl ">
               <figure className="mx-auto w-full max-w-[600px] h-[400px] overflow-hidden rounded-4xl">
-                <Image
-                  src={urlFor(recipe.mainImage).url()}
-                  width={900}
-                  height={500}
-                  className="rounded-2xl w-full object-cover h-full"
-                  alt={recipe.title}
-                />
+                <Suspense fallback={<h1 className="text-black">Loading...</h1>}>
+                  <Image
+                    src={urlFor(recipe.mainImage).url()}
+                    width={900}
+                    height={500}
+                    className="rounded-2xl w-full object-cover h-full"
+                    alt={recipe.title}
+                  />
+                </Suspense>
               </figure>
             </div>
 

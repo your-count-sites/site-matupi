@@ -1,9 +1,10 @@
 import Image from "next/image";
-import React from "react";
-import { WaveRed } from "../../../../public/assets";
+import React, { Suspense } from "react";
+import { Cheeses, Tomato, WaveRed } from "../../../../public/assets";
 import { Card, Carousel } from "@/components/ui/apple-cards-carousel";
 import { getRecipes } from "@/sanity/querys/recipes";
 import Link from "next/link";
+import Container from "@/components/container";
 
 const MainRecipes = async () => {
   const recipes: IRecipe[] = await getRecipes();
@@ -16,7 +17,30 @@ const MainRecipes = async () => {
 
   return (
     <section className="w-full overflow-hidden relative py-20 bg-[#F30808]">
-      <Carousel items={cards} />
+      <Image
+        src={Tomato}
+        className="absolute -top-2 lg:w-[250px] w-[100px] left-8 "
+        alt="Tomate e folhas"
+        quality={100}
+        loading="lazy"
+      />
+      <Image
+        src={Cheeses}
+        className="absolute lg:w-[250px] w-[100px] right-8 "
+        alt="Queijos"
+        quality={100}
+        loading="lazy"
+      />
+      <Container>
+        <h1 className="text-white text-center lg:text-[2.5em] text-[1.5em] font-semibold">
+          Todas as receitas
+        </h1>
+      </Container>
+      <Suspense
+        fallback={<div className="text-white text-4xl">loading...</div>}
+      >
+        <Carousel items={cards} />
+      </Suspense>
     </section>
   );
 };
