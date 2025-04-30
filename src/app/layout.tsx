@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import { Sora } from "next/font/google";
 import ReactQueryProvider from "@/providers/react-query-provider";
 import { Toaster } from "@/components/ui/sonner";
+import NextTopLoader from "nextjs-toploader";
 
 const sora = Sora({
   weight: ["400", "700"],
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${sora.className} scroll-smooth`}>
       <body>
         <ReactQueryProvider>
+          <NextTopLoader color="#f30808" />
           <NavBar />
           <main>{children}</main>
           <Toaster />
