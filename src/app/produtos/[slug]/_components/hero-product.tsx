@@ -68,11 +68,40 @@ const HeroProduct = ({
             </div>
           </div>
 
-          <div>
+          <div className="relative h-[500px] w-[600px] flex items-center justify-center">
+            <div className=" absolute top-14 right-0 h-full w-full rounded-2xl ">
+              <figure className="mx-auto w-full max-w-[500px] h-[400px] flex items-center justify-center overflow-hidden rounded-4xl bg-white border shadow-md">
+                {mainImage ? (
+                  <Image
+                    src={urlFor(mainImage).url()}
+                    alt="Tabela nutricional"
+                    width={1000}
+                    height={200}
+                    className="w-[400px] h-[400px] object-cover"
+                  />
+                ) : (
+                  <IconPhoto />
+                )}
+              </figure>
+            </div>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 480 480"
-              className="lg:flex hidden absolute -top-24 right-40 w-[580px] h-[800px] -z-10"
+              className="lg:flex hidden absolute w-[550px] h-[800px] -z-10"
+            >
+              <path
+                d="M437.3 158.3A99.5 99.5 0 0 0 321.6 42.8a99.5 99.5 0 0 0-163.4 0A99.5 99.5 0 0 0 42.7 158.3a99.5 99.5 0 0 0 0 163.4 99.5 99.5 0 0 0 115.6 115.6 99.5 99.5 0 0 0 163.4 0 99.5 99.5 0 0 0 115.5-115.6 99.5 99.5 0 0 0 0-163.4Z"
+                fill="#f30808"
+              ></path>
+            </svg>
+          </div>
+
+          {/* <div className="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 480 480"
+              className="lg:flex hidden absolute -top-18 right-58 w-[620px] h-[800px] -z-10"
             >
               <path
                 d="M437.3 158.3A99.5 99.5 0 0 0 321.6 42.8a99.5 99.5 0 0 0-163.4 0A99.5 99.5 0 0 0 42.7 158.3a99.5 99.5 0 0 0 0 163.4 99.5 99.5 0 0 0 115.6 115.6 99.5 99.5 0 0 0 163.4 0 99.5 99.5 0 0 0 115.5-115.6 99.5 99.5 0 0 0 0-163.4Z"
@@ -92,7 +121,7 @@ const HeroProduct = ({
                 <IconPhoto />
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </section>
