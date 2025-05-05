@@ -25,7 +25,7 @@ const HeroRecipe = ({ recipe }: { recipe: IRecipe }) => {
     <section className="w-full overflow-hidden ">
       <Image
         src={Saleiro}
-        className="absolute top-14 w-[200px] left-8 "
+        className="absolute top-14 lg:w-[200px] w-[100px] left-8 "
         alt="Tomate e folhas"
         quality={100}
         loading="lazy"
@@ -33,14 +33,14 @@ const HeroRecipe = ({ recipe }: { recipe: IRecipe }) => {
 
       <Image
         src={Frigideira}
-        className="absolute w-[200px] right-8 "
+        className="absolute lg:w-[200px] w-[100px] right-8 "
         alt="Queijos"
         quality={100}
         loading="lazy"
       />
 
       <Container>
-        <div className="w-full flex flex-row items-center justify-between py-10 ">
+        <div className="w-full flex lg:flex-row flex-col gap-20 items-center justify-between py-10 ">
           <Image
             src={BandeijaComTampa}
             className="absolute w-[150px] left-200 bottom-50 -rotate-20"
@@ -52,7 +52,7 @@ const HeroRecipe = ({ recipe }: { recipe: IRecipe }) => {
             <span className="px-8 py-2 bg-red-500 text-white rounded-full w-fit font-bold text-lg">
               {recipe.category}
             </span>
-            <h1 className="text-[3.2em] font-medium font-(family-name:--font-sora) text-red-600 ">
+            <h1 className="lg:text-[3.2em] text-[2em] font-medium font-(family-name:--font-sora) text-red-600 ">
               {recipe.title}
             </h1>
 
@@ -60,7 +60,7 @@ const HeroRecipe = ({ recipe }: { recipe: IRecipe }) => {
               {recipe.description}
             </p>
 
-            <div className="flex flex-row gap-8 items-center">
+            <div className="flex lg:flex-row flex-col gap-8 lg:items-center">
               <span className="flex flex-row gap-2 text-xl font-semibold text-zinc-600 ">
                 <Clock color="red" />
                 {recipe.prepTime}

@@ -6,19 +6,19 @@ export const PROPOSALS = [
   {
     title: "Missão",
     description:
-      "Produzir laticínios com qualidade, confiança e cuidado em cada etapa, valorizando colaboradores e satisfazendo clientes e parceiros.",
+      "Oferecer ao mercado produto de qualidade, fornecendo serviço com elevando padrão percebido por todos, com os colaboradores bem-motivados para buscar uma satisfação e confiabilidade aos nossos clientes e fornecedores.",
     icon: <TargetIcon size={24} />,
   },
   {
     title: "Visão",
     description:
-      "Ser reconhecida nacionalmente como referência no setor de alimentos, com entregas consistentes pautadas na inovação, agilidade, responsabilidade e ética. ",
+      "Ser referência no mercado em destruição de produtos alimentícios, buscando a inovação e qualidade nos processos e serviços oferecidos, ética e agilidade juntos aos seus clientes. ",
     icon: <Eye size={24} />,
   },
   {
     title: "Valores",
     description:
-      "Trabalhamos com respeito, transparência e responsabilidade, guiados pela paciência no processo e pela persistência em crescer com qualidade.",
+      "Para que nossos objetivos sejam alcançados, nossos professionais se baseiam em pilares: Respeito, transparência, responsabilidade, paciência, persistência.",
     icon: <Compass size={24} />,
   },
 ];
@@ -35,7 +35,7 @@ const Mission = () => {
             {PROPOSALS.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col border justify-between overflow-hidden relative h-[260px] w-full bg-white rounded-lg shadow-md text-[#f30808]"
+                className="flex flex-col border justify-between overflow-hidden relative h-[310px] w-full bg-white rounded-lg shadow-md text-[#f30808]"
               >
                 <div className="flex flex-col gap-1 p-5 ">
                   {item.icon}

@@ -2,9 +2,9 @@ import Container from "@/components/container";
 
 export const Process = ({ recipe }: { recipe: IRecipe }) => {
   return (
-    <section className="w-full overflow-hidden mt-[100px]">
+    <section className="w-full overflow-hidden lg:mt-[100px] mt-[0px]">
       <Container>
-        <div className="w-full grid grid-cols-2">
+        <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-20">
           <div className="flex flex-col gap-8 ">
             <h1 className="text-red-500 uppercase text-md font-semibold font-(family-name:--font-sora)">
               Ingredientes

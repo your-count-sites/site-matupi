@@ -48,7 +48,7 @@ const Footer = () => {
     >
       <Image
         src={WaveYellow}
-        className="absolute lg:-top-10  -top-3  w-full "
+        className="absolute lg:-top-10 md:-top-10 -top-3  w-full "
         alt="Footer"
         quality={100}
         loading="lazy"

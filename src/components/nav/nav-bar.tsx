@@ -6,8 +6,6 @@ import NavBarMobile from "./mobile-nav";
 import { usePathname } from "next/navigation";
 
 const NavBar = () => {
-  const pathname = usePathname();
-
   return (
     <header className={`w-full overflow-hidden bg-white `}>
       <DesktopNav />
