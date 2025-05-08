@@ -18,3 +18,13 @@ export async function getSingleProduct(slug: string) {
 
   return data;
 }
+
+export async function getFilteredProductsByCategory(category: string) {
+  const query = groq`*[_type == "product" && categories->slug.current == "${category}"]{
+    title, slug,  "slug": slug.current, mainImage}
+  `;
+
+  const data = client.fetch(query, {}, options);
+
+  return data;
+}

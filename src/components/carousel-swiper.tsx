@@ -45,7 +45,7 @@ const CarouselSwiper = ({ products }: { products: IProduct[] }) => {
           products.map((item, index) => (
             <SwiperSlide
               key={index}
-              className="text-black bg-white rounded-4xl overflow-hidden "
+              className="text-black bg-white rounded-4xl overflow-hidden border shadow-md "
             >
               <div className=" w-full h-full flex items-center justify-center flex-col">
                 <div className="flex flex-col gap-8 items-center">
