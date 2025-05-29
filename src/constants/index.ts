@@ -1,8 +1,7 @@
 export const NAV_LINKS = [
   { name: "Receitas", href: "/receitas" },
   { name: "Produtos", href: "/produtos" },
-  { name: "Serviços", href: "/servicos" },
-  // { name: "Conteúdos", href: "/conteudos" },
+  { name: "Serviços", href: "https://lp.matupi.com.br" },
   { name: "A Matupi", href: "/sobre-nos" },
-  { name: "Fale Conosco", href: "/fale-conosco" },
+  { name: "Fale Conosco", href: "https://lp.matupi.com.br" },
 ];

@@ -131,15 +131,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex flex-row justify-between gap-2 items-center">
-          <Button
-            className={`group lg:ml-14 ml-10 bg-transparent border-2 border-white text-white hover:bg-white
-           hover:text-red-500 rounded-full lg:text-xl text-sm py-5 px-10 cursor-pointer transition-all duration-200 ease-in ${pathname === "/receitas" ? "invisible" : ""}`}
-          >
-            Veja todas as receitas{" "}
-            <ArrowRight className="group-hover:translate-x-1.5 transition-all duration-200 ease-in" />
-          </Button>
-
+        <div className="flex flex-row justify-end gap-2 items-center">
           <div className="lg:flex hidden flex-row gap-2 lg:mr-10 mr-5 ">
             <button
               className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"

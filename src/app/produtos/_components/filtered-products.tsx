@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { WaveWhite } from "../../../../public/assets";
+import { WaveRed, WaveWhite } from "../../../../public/assets";
 import Container from "@/components/container";
 import {
   getFilteredRecipesByCategory,
@@ -60,6 +60,14 @@ const FilteredProducts = () => {
       </Container>
 
       <GetFilteredRecipes category={category} />
+
+      <Image
+        src={WaveRed}
+        className="absolute -bottom-2 w-full "
+        alt="Receitas"
+        quality={100}
+        loading="lazy"
+      />
     </section>
   );
 };
