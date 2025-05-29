@@ -25,12 +25,12 @@ const FilteredProducts = () => {
         loading="lazy"
       />
       <Container>
-        <div className="flex flex-col gap-5 items-center">
+        <div className="flex flex-col gap-5">
           <h1 className="text-[#f30808] font-normal lg:text-[2em] text-[1.5em] max-w-[600px]">
             Guia de compras. Compre aqui
           </h1>
 
-          <div className="flex w-full justify-center items-center space-x-2 mb-4">
+          <div className="flex w-fulljustify-center items-center space-x-2 mb-4">
             <Button
               variant={category === "queijos" ? "default" : "outline"}
               onClick={() => setCategory("queijos")}

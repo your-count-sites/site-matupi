@@ -27,23 +27,12 @@ const FilteredRecipes = () => {
         loading="lazy"
       />
       <Container>
-        <div className="flex flex-col gap-5 items-center">
+        <div className="flex flex-col gap-5 ">
           <h1 className="text-[#f30808] font-normal lg:text-[2em] text-[1.5em] max-w-[600px]">
             Encontre o prato perfeito para você
           </h1>
-          {/* 
-          <div className="flex flex-row gap-5">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                className="p-2 border shadow-md rounded-md lg:text-sm text-xs hover:-translate-y-1 transition-all ease-in-out duration-300 bg-white text-[#f30808] font-semibold  hover:bg-[#f30808] hover:text-white cursor-pointer"
-              >
-                {category}
-              </button>
-            ))}
-          </div> */}
 
-          <div className="flex w-full justify-center items-center space-x-2 mb-4">
+          <div className="flex w-full space-x-2 mb-4">
             <Button
               variant={category === "salgadas" ? "default" : "outline"}
               onClick={() => setCategory("salgadas")}

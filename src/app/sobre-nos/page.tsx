@@ -1,4 +1,5 @@
 import ContactUs from "../(main)/_components/contact-us";
+import ServicesSection from "../(main)/_components/services";
 import EmployesSection from "./_components/employes-section";
 import HeroAboutUs from "./_components/hero-about-us";
 import Mission from "./_components/mission";
@@ -14,6 +15,7 @@ export default function AboutUs() {
       <ProposalSection />
       <EmployesSection />
       <ContactUs />
+      <ServicesSection />
     </>
   );
 }

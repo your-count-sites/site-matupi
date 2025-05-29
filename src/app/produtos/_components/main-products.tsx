@@ -32,6 +32,8 @@ const MainProducts = async () => {
         <h1 className="text-white text-center lg:text-[2.5em] text-[1.5em] font-semibold">
           Veja os principais produtos Matupi
         </h1>
+
+        <p className="text-3xl text-zinc-100 text-center mt-1">Escolha o seu</p>
       </Container>
       <Suspense
         fallback={<div className="text-white text-4xl">loading...</div>}

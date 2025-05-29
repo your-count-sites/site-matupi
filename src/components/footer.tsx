@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="flex flex-col gap-5 text-[#F30808]">
               <h1 className="text-2xl font-bold">Institucional</h1>
 
-              <div className="grid grid-rows-2 grid-cols- gap-6">
+              <div className="grid grid-rows-1 grid-cols-4 gap-6">
                 {NAV_LINKS.map((link, index) => (
                   <Link href={link.href} key={index}>
                     {link.name}
