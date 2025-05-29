@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import Image from "next/image";
-import { Pimenta, Queijo } from "../../../../public/assets";
+import { Pimenta, Queijo, WaveWhite } from "../../../../public/assets";
 import CarouselSwiper from "@/components/carousel-swiper";
 import { getProducts } from "@/sanity/querys/products";
 
@@ -8,7 +8,7 @@ const Products = async () => {
   const products = await getProducts();
 
   return (
-    <section className="w-full overflow-hidden relative py-20 bg-[#F30808]">
+    <section className="w-full overflow-hidden relative py-52 bg-[#F30808]">
       <Image
         src={Pimenta}
         className="absolute -top-2 lg:w-[200px] w-[100px] lg:-left-10 -left-5 rotate-90 "
@@ -16,7 +16,6 @@ const Products = async () => {
         quality={100}
         loading="lazy"
       />
-
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +28,6 @@ const Products = async () => {
           ></path>
         </svg>
       </div>
-
       <Container>
         <div className="flex lg:flex-row flex-col gap-5 justify-between items-center">
           <div className="flex flex-col gap-3">
@@ -51,10 +49,14 @@ const Products = async () => {
           </div>
         </div>
       </Container>
-
       <CarouselSwiper products={products} />
-
-      <div className="w-full flex flex-row justify-center mt-20"></div>
+      <Image
+        src={WaveWhite}
+        className="absolute -bottom-2 w-full "
+        alt="Matupi"
+        quality={100}
+        loading="lazy"
+      />{" "}
     </section>
   );
 };

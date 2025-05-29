@@ -4,6 +4,7 @@ import Hero from "./_components/hero";
 import HistorySection from "./_components/history";
 import Products from "./_components/products";
 import Recipes from "./_components/recipes";
+import ServicesSection from "./_components/services";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       {/* <ContentsSection /> */}
       <HistorySection />
       <ContactUs />
+      <ServicesSection />
     </>
   );
 }

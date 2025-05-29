@@ -58,16 +58,20 @@ const Footer = () => {
           <div className="flex lg:flex-row flex-col gap-20 justify-between py-10">
             <div className="flex flex-col gap-5 text-[#F30808]">
               <h1 className="text-2xl font-bold">Institucional</h1>
-              {NAV_LINKS.map((link, index) => (
-                <Link href={link.href} key={index}>
-                  {link.name}
-                </Link>
-              ))}
+
+              <div className="grid grid-rows-2 grid-cols- gap-6">
+                {NAV_LINKS.map((link, index) => (
+                  <Link href={link.href} key={index}>
+                    {link.name}
+                  </Link>
+                )).slice(0, 4)}
+              </div>
             </div>
             <div className="flex flex-col gap-5 text-[#F30808]">
               <h1 className="text-2xl font-bold">Entre em contato</h1>
               <span className="">contato@laticiniomatupi.com.br</span>
               <span>(92) 99271 1900</span>
+              <Link href={"/fale-conosco"}>Fale conosco</Link>
             </div>
           </div>
 

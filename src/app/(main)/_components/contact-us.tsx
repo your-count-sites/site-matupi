@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const ContactUs = () => {
   return (
-    <section className="w-full overflow-hidden relative ">
+    <section className="w-full overflow-hidden relative py-32 ">
       <Image src={ContatoBg} alt="Matupi" className="lg:flex hidden" />
       <Image src={ContatoBgMobile} alt="Matupi" className="lg:hidden flex" />
 
@@ -49,28 +49,13 @@ const ContactUs = () => {
           </div>
         </Container>
       </div>
-
-      {/* <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 480 480"
-        className="absolute lg:w-[400px] hidden -right-32 -top-52 rotate-x-12 z-20"
-      >
-        <path
-          d="M360 289.7c43.4 0 86.9-16.6 120-49.7a169.2 169.2 0 0 0-120-49.7 169.2 169.2 0 0 0 49.7-120c-46.9 0-89.3 19-120 49.7 0-43.4-16.6-86.9-49.7-120a169.2 169.2 0 0 0-49.7 120 169.2 169.2 0 0 0-120-49.7c0 46.8 19 89.3 49.7 120-43.4 0-86.9 16.6-120 49.7a169.2 169.2 0 0 0 120 49.7 169.2 169.2 0 0 0-49.7 120c46.8 0 89.3-19 120-49.7 0 43.4 16.6 86.9 49.7 120a169.2 169.2 0 0 0 49.7-120 169.2 169.2 0 0 0 120 49.7c0-46.9-19-89.3-49.7-120Z"
-          fill="#F30808 "
-        ></path>
-      </svg> */}
-
-      {/* <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 480 480"
-        className="absolute lg:w-[400px] w-[00px] -right-32 top-[10em] rotate-x-12"
-      >
-        <path
-          d="M360 289.7c43.4 0 86.9-16.6 120-49.7a169.2 169.2 0 0 0-120-49.7 169.2 169.2 0 0 0 49.7-120c-46.9 0-89.3 19-120 49.7 0-43.4-16.6-86.9-49.7-120a169.2 169.2 0 0 0-49.7 120 169.2 169.2 0 0 0-120-49.7c0 46.8 19 89.3 49.7 120-43.4 0-86.9 16.6-120 49.7a169.2 169.2 0 0 0 120 49.7 169.2 169.2 0 0 0-49.7 120c46.8 0 89.3-19 120-49.7 0 43.4 16.6 86.9 49.7 120a169.2 169.2 0 0 0 49.7-120 169.2 169.2 0 0 0 120 49.7c0-46.9-19-89.3-49.7-120Z"
-          fill="#F30808 "
-        ></path>
-      </svg> */}
+      <Image
+        src={WaveRed}
+        className="absolute -bottom-2 w-full "
+        alt="Receitas"
+        quality={100}
+        loading="lazy"
+      />
     </section>
   );
 };
